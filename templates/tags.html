@@ -5,10 +5,23 @@
 
     <h1>Tags</h1>
 
+    <h2>Alphabetically</h2>
+
     <ul class="tag-list">
-    {% for tag, articles in tags|sort %}
+    {% for tag, articles in tags %}
         <li class="tag"><i class="icon-tags muted"></i><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }} <span class="muted">[{{ articles|count }}]</span></a></li>
     {% endfor %}
     </ul>
+
+	<hr />
+
+	<h2>By Frequency</h2>
+
+    <ul class="tag-list">
+    {% for tag, articles in tags|tagsort %}
+        <li class="tag"><i class="icon-tags muted"></i><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }} <span class="muted">[{{ articles|count }}]</span></a></li>
+    {% endfor %}
+    </ul>
+
 
 {% endblock %}
