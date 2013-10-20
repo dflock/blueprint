@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <title>{% block title %}{{ SITE_TITLE }}: {{ SITENAME }}{% endblock %}</title>
 {# Favicons #}
-    <meta itemprop="image" content="{% block metaimage %}{{ SITEURL }}/static/images/favicon-128x128.png{% endblock %}">
+    <meta itemprop="image" content="{% block metaimage %}{{ SITEURL }}/images/favicon-128x128.png{% endblock %}">
     <link rel="shortcut icon" href="{{ SITEURL }}/favicon.ico">
-    <link rel="apple-touch-icon" href="{{ SITEURL }}/static/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ SITEURL }}/static/images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ SITEURL }}/static/images/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" href="{{ SITEURL }}/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ SITEURL }}/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ SITEURL }}/images/apple-touch-icon-114x114.png">
 
     <meta name="description" itemprop="description" content="{% block description %}{{ SITE_DESCRIPTION }}{% endblock %}" />
 
@@ -43,7 +43,7 @@
     <meta name="twitter:title" content="{{ SITENAME }}">
     <meta name="twitter:description" content="{{ SITE_DESCRIPTION }}">
     <meta name="twitter:creator" content="@{{ TWITTER_USERNAME }}">
-    <meta name="twitter:image" content="{{ SITEURL }}/static/images/favicon-128x128.png">
+    <meta name="twitter:image" content="{{ SITEURL }}/images/favicon-128x128.png">
     <meta name="twitter:domain" content="{{ SITE_DOMAIN }}">
 {% endblock %}
 {% endif %}
@@ -53,7 +53,7 @@
     <meta property="og:title" content="{{ SITENAME }}"/>
     <meta property="og:type" content="blog"/>
     <meta property="og:description" content="{{ SITE_DESCRIPTION }}"/>
-    <meta property="og:image" content="{{ SITEURL }}/static/images/favicon-128x128.png"/>
+    <meta property="og:image" content="{{ SITEURL }}/images/favicon-128x128.png"/>
     <meta property="og:url" content="{{ SITEURL }}"/>
 {% endblock %}
 {% endif %}

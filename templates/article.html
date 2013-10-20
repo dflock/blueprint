@@ -2,7 +2,7 @@
 
 {% block pageschema %}{{ article.schema|d(DEFAULT_PAGESCHEMA) }}{% endblock %}
 
-{% block metaimage %}{{ SITEURL }}{{ article.thumbnail|d('/static/images/favicon-128x128.png') }}{% endblock %}
+{% block metaimage %}{{ SITEURL }}{{ article.thumbnail|d('/images/favicon-128x128.png') }}{% endblock %}
 
 {% block title %}{{ article.title|striptags }}: {{ SITENAME }}{% endblock %}
 {% block description %}{{ article.meta_description|d(article.summary|striptags|striptags|striptags) }}{% endblock %}
@@ -13,7 +13,7 @@
     <meta name="twitter:image" content="{{ SITEURL }}{{ article.thumbnail }}">
 {% else %}
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:image" content="{{ SITEURL }}/static/images/favicon-128x128.png">
+    <meta name="twitter:image" content="{{ SITEURL }}/images/favicon-128x128.png">
 {% endif %}
     <meta name="twitter:site" content="@{{ TWITTER_USERNAME }}">
     <meta name="twitter:title" content="{{ article.title|striptags }}">
@@ -27,7 +27,7 @@
 {% if article.thumbnail %}
     <meta property="og:image" content="{{ SITEURL }}{{ article.thumbnail }}"/>
 {% else %}
-    <meta property="og:image" content="{{ SITEURL }}/static/images/favicon-128x128.png"/>
+    <meta property="og:image" content="{{ SITEURL }}/images/favicon-128x128.png"/>
 {% endif %}
     <meta property="og:site_name" content="{{ SITENAME }}"/>
     <meta property="og:title" content="{{ article.title|striptags }}"/>

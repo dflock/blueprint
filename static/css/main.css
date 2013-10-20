@@ -67,7 +67,7 @@ h1 {
 .blog-header,
 .blog-footer {
     padding: 16px 0;
-    background: #2C71B8 url(/static/images/blueprint-background.png) repeat;
+    background: #2C71B8 url(/images/blueprint-background.png) repeat;
     color: #fff;
     margin-bottom: 1em;
 }
@@ -377,7 +377,7 @@ h1 {
 .content div.note,
 .content div.caution {
     padding: 0.25em 1em;
-    background: #2C71B8 url(/static/images/blueprint-background.png);
+    background: #2C71B8 url(/images/blueprint-background.png);
     color: #fff;
     border: 1px solid #3C7CBD;
     border-radius: 4px;
