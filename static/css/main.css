@@ -553,8 +553,8 @@ table.archive td p {
 .hresume .boxout dl {
     margin: 0 auto 0 auto;
 }
-.hresume .boxout i {
-    color: #bbb;
+.hresume i {
+    color: #999;
 }
 
 .hresume .experience h4 {
@@ -565,6 +565,13 @@ table.archive td p {
 }
 .hresume .experience .job_description p {
     line-height: 1.3;
+}
+
+.hresume .download {
+    float: right;
+    margin-top: -1em;
+    font-variant: small-caps;
+    color: #999;
 }
 
 /*-----------------------------
