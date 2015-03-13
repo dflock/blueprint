@@ -1,12 +1,13 @@
 /* Styling for elements */
 body {
     font-family: 'Bitter', Georgia, serif;
-    font-size: 100%;
+    font-size: 1em;
     line-height: 1.5;
 }
 p {
     margin: 0.8em 0;
     text-align: justify;
+    font-size: 1.15em;
 
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
@@ -98,7 +99,7 @@ h1 {
 
 .navbar .nav > li > a { color: #FF0F00; }
 .navbar .divider-vertical { border-right: 1px solid #4D4D4D; }
-.navbar { margin-bottom: 4em; background-color: rgba(0,0,0,0); }
+.navbar { margin-bottom: 4em; background-color: #000; }
 
 #blog-nav {
     padding: 5px 0;
@@ -289,6 +290,7 @@ h1 {
     border: 1px solid #bbb;
     border-radius: 3px;
     padding: 4px;
+    background: #fff;
     float: left;
     margin: 1em 1em 1em 0;
     box-shadow: 4px 4px 4px 0 rgba(128, 128, 128, 0.5);
@@ -300,6 +302,11 @@ h1 {
 .content img.align-right {
     float: right;
     margin: 0.5em 0 1em 1em;
+}
+.content img.no-wrap {
+    float: none;
+    clear: both;
+    margin-bottom: 0.15em;
 }
 
 .content img.bare {
@@ -337,12 +344,12 @@ h1 {
 .content .figure p.caption {
     margin: 0;
     font-size: 80%;
-    padding: 4px;
+    padding: 8px;
     float: left;
     text-align: left;
 }
 .content .figure div.legend {
-    padding: 4px;
+    padding: 8px 4px;
     font-size: 80%;
     color: #aaa;
     font-style: italic;
@@ -428,7 +435,7 @@ h1 {
 tt.literal {
     font-family: 'PT Mono', Monaco, Menlo, Consolas, 'Courier New', monospace;
     background-color: #DEDEDE;
-    font-size: 110%;
+    /*font-size: 110%;*/
     padding: 0.15em 0.2em 0 0.2em;
     border-radius: 3px;
     line-height: 1;
@@ -445,6 +452,10 @@ tt.literal {
 }
 .content h2 {
     font-size: 225%;
+    margin-top: 1em;
+}
+.content h3 {
+    font-size: 160%;
 }
 .content h4 {
     font-size: 130%;
