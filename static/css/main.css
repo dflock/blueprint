@@ -427,13 +427,18 @@ h1 {
     display: inline-block;
 }
 .highlight pre {
-    font-family: 'PT Mono', Monaco, Menlo, Consolas, 'Courier New', monospace;
+    font-family: 'PT Mono', Menlo, Monaco, Consolas, monospace;
     background-color: #090916;
     color: #f8f8f2;
     font-size: 90%;
+
+    overflow: auto;
+    white-space: pre;
+    word-wrap: normal;
+    border: none;
 }
 tt.literal {
-    font-family: 'PT Mono', Monaco, Menlo, Consolas, 'Courier New', monospace;
+    font-family: 'PT Mono', Menlo, Monaco, Consolas, monospace;
     background-color: #DEDEDE;
     /*font-size: 110%;*/
     padding: 0.15em 0.2em 0 0.2em;
@@ -573,6 +578,7 @@ table.archive td p {
 }
 .hresume .experience .smallprint p {
     text-align: right;
+    color: #888;
 }
 .hresume .experience .job_description p {
     line-height: 1.3;
