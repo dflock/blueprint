@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>{% block title %}{{ SITE_TITLE }}: {{ SITENAME }}{% endblock %}</title>
+    <meta name="name" itemprop="name" itemscope itemtype="http://schema.org/Organization" content="{% block name %}{{ SITENAME }}{% endblock %}" />
 {# Favicons #}
     <meta itemprop="image" content="{% block metaimage %}{{ SITEURL }}/images/favicon-128x128.png{% endblock %}">
     <link rel="shortcut icon" href="{{ SITEURL }}/favicon.ico">
