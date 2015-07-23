@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8">
     <title>{% block title %}{{ SITE_TITLE }}: {{ SITENAME }}{% endblock %}</title>
-    <meta name="name" itemprop="name" itemscope itemtype="http://schema.org/Organization" content="{% block name %}{{ SITENAME }}{% endblock %}" />
 {# Favicons #}
     <meta itemprop="image" content="{% block metaimage %}{{ SITEURL }}/images/favicon-128x128.png{% endblock %}">
     <link rel="shortcut icon" href="{{ SITEURL }}/favicon.ico">
@@ -15,6 +14,22 @@
 
     <meta name="copyright" content="Copyright (c) {{ COPYRIGHT_FROM }}-{{ COPYRIGHT_UNTIL }} {{ AUTHOR }}" />
     <meta name="author" content="{{ AUTHOR }}" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "Organization",
+          "name": "{{ SITENAME }}",
+          "url": "{{ SITEURL }}",
+          "logo": "{{ SITEURL }}/images/favicon-128x128.png",
+          "sameAs": [
+            {% for anchor_text, name, link in SOCIAL %}
+            "{{ link }}"{% if not loop.last %},{% endif %}
+            {% endfor %}
+          ]
+        }
+    </script>
+
 
 {% if FEED_RSS %}
     <link rel='alternate' type='application/rss+xml' title='RSS Feed (full content)' href='{{ SITEURL }}/{{ FEED_RSS }}' />
