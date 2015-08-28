@@ -536,7 +536,11 @@ table.archive td p {
     margin: 0.2em 0;
 }
 
-/* Styles for my CV */
+/*
+
+Styles for my CV
+
+*/
 
 .hresume h1,
 .hresume h2,
@@ -589,6 +593,47 @@ table.archive td p {
     margin-top: -1em;
     font-variant: small-caps;
     color: #999;
+}
+
+/*
+
+Styles for the E-Numbers stuff
+
+TODO: Split into separate stylesheet that only loads on that page
+
+*/
+
+nav.enumbers ul {
+    padding-left: 0;
+}
+nav.enumbers li {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+table.enumbers {
+    width: 100%;
+}
+.enumbers td.bad {
+    background-color: #f63;
+    font-weight: bolder;
+    color: #fff;
+    text-align: center;
+}
+.enumbers td.good {
+    background-color: #6c6;
+    font-weight: bolder;
+    color: #fff;
+    text-align: center;
+}
+.enumbers td.unknown {
+    text-align: center;
+    background-color: #ffc;
+}
+.enumbers td .altname {
+    font-size: smaller;
+    font-style: italic;
+    color: #666;
 }
 
 /*-----------------------------
