@@ -607,8 +607,9 @@ nav.enumbers ul {
     padding-left: 0;
 }
 nav.enumbers li {
-    display: inline-block;
-    margin-right: 1em;
+  margin-right: 1em;
+  float: left;
+  padding-right: 1em;
 }
 
 table.enumbers {

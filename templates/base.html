@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" itemscope="itemscope" itemtype="http://schema.org/{% block pageschema %}WebPage{% endblock %}">
+<html lang="en" itemscope="itemscope" itemtype="http://schema.org/{% block pageschema %}WebPage{% endblock %}"
+  {% if OPEN_GRAPH_METADATA %}
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:fb="https://www.facebook.com/2008/fbml"{% endif %}>
 <head>
     <meta charset="utf-8">
     <title>{% block title %}{{ SITE_TITLE }}: {{ SITENAME }}{% endblock %}</title>
@@ -8,6 +11,7 @@
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon.png">
 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" itemprop="description" content="{% block description %}{{ SITE_DESCRIPTION }}{% endblock %}" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -64,6 +68,9 @@
 {% endif %}
 {% if OPEN_GRAPH_METADATA %}
 {% block opengraph %}
+    {% if OPEN_GRAPH_FB_APP_ID %}
+    <meta property="fb:app_id" content="{{ OPEN_GRAPH_FB_APP_ID }}"/>
+    {% endif %}
     <meta property="og:site_name" content="{{ SITENAME }}"/>
     <meta property="og:title" content="{{ SITENAME }}"/>
     <meta property="og:type" content="blog"/>

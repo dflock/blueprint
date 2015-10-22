@@ -1,15 +1,28 @@
 {% extends "base.html" %}
-{% block title %}{{ page.title }}: {{ SITENAME }}{% endblock %}
-{% block description %}{{ page.meta_description|d(page.summary|striptags) }}{% endblock %}
+{% block title %}{{ page.title|striptags|escape }}: {{ SITENAME }}{% endblock %}
+{% block description %}{{ page.meta_description|d(page.summary|striptags|escape) }}{% endblock %}
 {% block twittercard %}
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@{{ TWITTER_USERNAME }}">
     <meta name="twitter:title" content="{{ page.title|striptags }}">
-    <meta name="twitter:description" content="{{ page.meta_description }}">
+    <meta name="twitter:description" content="{{ page.summary|striptags|escape }}">
     <meta name="twitter:creator" content="@{{ TWITTER_USERNAME }}">
     <meta name="twitter:image" content="{{ SITEURL }}/favicon.png">
     <meta name="twitter:domain" content="{{ SITE_DOMAIN }}">
 {% endblock %}
+{% if OPEN_GRAPH_METADATA %}
+{% block opengraph %}
+    {% if OPEN_GRAPH_FB_APP_ID %}
+    <meta property="fb:app_id" content="{{ OPEN_GRAPH_FB_APP_ID }}"/>
+    {% endif %}
+    <meta property="og:site_name" content="{{ SITENAME }}" />
+    <meta property="og:title" content="{{ page.title|striptags|escape }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="{{ page.summary|striptags|escape }}"/>
+    <meta property="og:image" content="{{ SITEURL }}/images/favicon-128x128.png"/>
+    <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}"/>
+{% endblock %}
+{% endif %}
 {% block content %}
 <section class="body span11 content">
     <h1 class="content-title">{{ page.title }}</h1>
