@@ -2,9 +2,9 @@
 
 {% block title %}
 {% if articles_page.has_previous() and articles_page.number > 1 %}
-{{ SITE_TITLE }}: {{ SITENAME }}, page {{ articles_page.number }}
+{{ SITE_TITLE }} &middot; {{ SITENAME }}, page {{ articles_page.number }}
 {% else %}
-{{ SITE_TITLE }}: {{ SITENAME }}
+{{ SITE_TITLE }} &middot; {{ SITENAME }}
 {% endif %}
 {% endblock %}
 
@@ -43,4 +43,3 @@
         {% endfor %} {# For article #}
     {% endif %} {# If articles #}
 {% endblock content %}
-

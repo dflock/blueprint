@@ -4,7 +4,7 @@
 
 {% block metaimage %}{{ article.thumbnail|d('/images/favicon-128x128.png') }}{% endblock %}
 
-{% block title %}{{ article.title|striptags }}: {{ SITENAME }}{% endblock %}
+{% block title %}{{ article.title|striptags }} &middot; {{ SITENAME }}{% endblock %}
 {% block description %}{{ article.meta_description|d(article.summary|striptags|striptags|striptags) }}{% endblock %}
 {% if TWITTER_CARD %}
 {% block twittercard %}
