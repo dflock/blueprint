@@ -424,7 +424,10 @@ h1 {
 
 /* Styles for Code & literals */
 .summary div.highlight {
-    display: inline-block;
+    /*display: inline-block;*/
+}
+.highlight {
+    border-radius: 5px;
 }
 .highlight pre {
     font-family: 'PT Mono', Menlo, Monaco, Consolas, monospace;
