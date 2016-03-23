@@ -54,14 +54,15 @@
     <!-- Le styles -->
     <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
     {# Comment this out until I fix the BundleError:
-    {% assets filters="cssprefixer,cssmin", output="css/final-%(version)s.css", "css/fontello.css", "css/main.css", "css/pygments-monokai.css" %}
-        <link rel="stylesheet" media="all" href="/{{ ASSET_URL }}">
-    {% endassets %}
     #}
+    {% assets output="css/final-%(version)s.css", "css/fontello.css", "css/main.css", "css/pygments-monokai.css" %}
+        <link rel="stylesheet" media="all" href="{{ SITEURL }}/{{ ASSET_URL }}">
+    {% endassets %}
+    {#
     <link href="{{ SITEURL }}/theme/css/fontello.css" rel="stylesheet">
     <link href="{{ SITEURL }}/theme/css/main.css" rel="stylesheet">
-    <link href="{{ SITEURL }}/theme/css/pygments.css" rel="stylesheet">
     <link href="{{ SITEURL }}/theme/css/pygments-monokai.css" rel="stylesheet">
+    #}
 
 {# These webfonts seem to break if I merge them into one call. #}
     <link href='https://fonts.googleapis.com/css?family=Bitter:400,400italic|Droid+Serif:400' rel='stylesheet' type='text/css'>
