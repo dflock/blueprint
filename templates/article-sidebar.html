@@ -18,7 +18,7 @@
     </div>
 
     <div class="span10">
-        <p class="tag_heading">Tags:</p>
+        <h4 class="tag_heading">Tags:</h4>
         <ul class="tag-list">
         {% for tag in article.tags|sort %}
             <li class="tag"><i class="icon-tags muted"></i><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>

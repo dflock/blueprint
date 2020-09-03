@@ -6,6 +6,23 @@
 
 {% block title %}{{ article.title|striptags }} &middot; {{ SITENAME }}{% endblock %}
 {% block description %}{{ article.meta_description|d(article.summary|striptags|striptags|striptags) }}{% endblock %}
+
+{% if DUBLIN_CORE_METADATA %}
+{% block dublin_core_metadata %}
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
+
+<meta name="DC.title" lang="en" content="{{ article.title|striptags }}" />
+<meta name="DC.creator" content="{{ article.author }}" />
+<meta name="DCTERMS.issued" scheme="DCTERMS.W3CDTF" content="{{ article.date.isoformat() }}" />
+{% if article.last_modified_date %}<meta name="DCTERMS.modified" content="{{ article.last_modified_date.isoformat() }}" />{% endif %}
+<meta name="DC.identifier" scheme="DCTERMS.URI" content="{{ SITEURL }}/{{ article.url }}" />
+<meta name="DCTERMS.abstract" content="{{ article.meta_description|d(article.summary|striptags|striptags|striptags) }}" />
+<meta name="DC.format" scheme="DCTERMS.IMT" content="text/html" />
+<meta name="DC.type" scheme="DCTERMS.DCMIType" content="Text" />
+{% endblock %}
+{% endif %}
+
 {% if TWITTER_CARD %}
 {% block twittercard %}
 {% if article.thumbnail %}
@@ -22,6 +39,7 @@
     <meta name="twitter:domain" content="{{ SITE_DOMAIN }}">
 {% endblock %}
 {% endif %}
+
 {% if OPEN_GRAPH_METADATA %}
 {% block opengraph %}
 {% if article.thumbnail %}

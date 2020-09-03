@@ -5,6 +5,9 @@
   xmlns:fb="https://www.facebook.com/2008/fbml"{% endif %}>
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link href="//fonts.googleapis.com" rel="dns-prefetch">
     <link href="//themes.googleusercontent.com" rel="dns-prefetch">
     <link href="//fonts.gstatic.com" rel="dns-prefetch">
@@ -12,19 +15,22 @@
     <link href="//ajax.googleapis.com" rel="dns-prefetch">
     <link href="//google-analytics.com" rel="dns-prefetch">
     <link href="//www.google-analytics.com" rel="dns-prefetch">
+
     <title>{% block title %}{{ SITE_TITLE }} &middot; {{ SITENAME }}{% endblock %}</title>
+
 {# Favicons #}
     <meta itemprop="image" content="{% block metaimage %}/images/favicon-128x128.png{% endblock %}">
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon.png">
+{# /Favicons #}
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" itemprop="description" content="{% block description %}{{ SITE_DESCRIPTION }}{% endblock %}" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <meta name="copyright" content="Copyright (c) {{ COPYRIGHT_FROM }}-{{ COPYRIGHT_UNTIL }} {{ AUTHOR }}" />
     <meta name="author" content="{{ AUTHOR }}" />
+    {% if article %}
+    <meta name="date" content="{{ article.date.isoformat() }}" />
+    {% endif %}
 
     <script type="application/ld+json">
         {
@@ -41,6 +47,9 @@
         }
     </script>
 
+{% if DUBLIN_CORE_METADATA %}
+{% block dublin_core_metadata %} {% endblock %}
+{% endif %}
 
 {% if FEED_RSS %}
     <link rel='alternate' type='application/rss+xml' title='RSS Feed (full content)' href='/{{ FEED_RSS }}' />

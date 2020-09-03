@@ -6,7 +6,6 @@ body {
 }
 p {
     margin: 0.8em 0;
-    text-align: justify;
     font-size: 1.15em;
 
     -webkit-hyphens: auto;
@@ -196,6 +195,7 @@ h1 {
 .article { padding-bottom:15px; padding-right: 40px; }
 .content-title { margin: 0.2em 0 0.2em 0; padding-right: 0.2em; }
 
+/* Article Sidebar */
 .article-sidebar {
     text-align: left;
     color: #888;
@@ -246,6 +246,12 @@ h1 {
     color: #bbb;
 }
 
+.article-sidebar h4 {
+  color: #888;
+}
+
+
+/* Article Blockquotes */
 .content blockquote {
     border-left: 5px solid #dedede;
 }
@@ -254,6 +260,7 @@ h1 {
     font-size: 0.9rem;
     font-style: italic;
 }
+
 
 /* Styles for article footnotes */
 .content table.footnote {
@@ -429,7 +436,7 @@ h1 {
 .highlight {
     border-radius: 5px;
 }
-.wrap .highlight pre {  
+.wrap .highlight pre {
   white-space: normal;
   word-break: break-word;
   overflow-wrap: break-word;
