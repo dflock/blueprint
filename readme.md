@@ -10,7 +10,7 @@ Social icons come from the [Fontello][3] project - amalgamated from various font
 
 Like built text, this theme supports an optional footer content element under the variable name `COLOPHON` (if set to true). `COLOPHON_TITLE` and `COLOPHON_CONTENT` will help in setting a footer content. A preview is shown below:
 
-![preview](https://raw.github.com/theanalyst/built-texts/new-features/screenshot.png)
+![preview](screenshot.png)
 
 [1]: http://ia.net/blog/100e2r/
 [2]: http://duncanlock.net/
