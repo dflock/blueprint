@@ -1,7 +1,7 @@
 {% if article.series %}
     <div class="row-fluid">
         <nav>
-            <p>This post is part of a series:</p>
+            <h4>This post is part of a series:</h4>
             <ol class="parts">
             {% for part_article in article.series.all %}
                 <li {% if part_article == article %}class="active"{% endif %}>
