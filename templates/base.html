@@ -147,23 +147,25 @@
           </div>
           <div class="span4" id="blog-nav">
             <ul class="nav nav-pills pull-right">
-              {% if HEADER_LINKS %} {% for anchor_text, name, link in
-              HEADER_LINKS %}
-              <li>
-                <a href="{{ link }}"
-                  >{% if name %}<i class="icon-{{ name }}"></i>{% endif
-                  %}{{anchor_text}}</a
-                >
+              {% for cat, null in categories %}
+              <li {% if cat == category %} class="active" {% endif %}>
+                <a href="{{ SITEURL }}/{{ cat.url }}">
+                  <i class="icon">{% if cat == category %}{{ICONS['category_active']}}{% else %}{{ICONS['category']}}{% endif %}</i>{{ cat }}
+                </a>
               </li>
-              {% endfor %} {% endif %} {% if DISPLAY_PAGES_ON_MENU %} {% for
-              page in PAGES %}
+              {% endfor %} {% if DISPLAY_PAGES_ON_MENU %} {% for page in PAGES
+              %}
               <li>
                 <a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>
               </li>
-              {% endfor %} {% endif %} {% for cat, null in categories %} <li {%
-              if cat == category %} class="active" {% endif %}>
-              <a href="{{ SITEURL }}/{{ cat.url }} ">{{ cat }}</a>
-              {% endfor %}
+              {% endfor %} {% endif %} {% if HEADER_LINKS %} {% for anchor_text,
+              icon, link in HEADER_LINKS %}
+              <li>
+                <a href="{{ link }}">
+                  <i class="icon">{{icon}}</i>{{anchor_text}}
+                </a>
+              </li>
+              {% endfor %} {% endif %}
             </ul>
           </div>
         </div>
