@@ -1,9 +1,10 @@
-i.icon {
-  background-repeat: no-repeat;
-  background-position: top left;
-}
 i.icon svg {
-  height: 16px;
   fill: #e8e8e8;
-  margin: 0 4px -2px 0;
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  width: 1.25em;
+  overflow: visible;
+  vertical-align: -0.125em;
+  margin: 0 4px 0 0;
 }
