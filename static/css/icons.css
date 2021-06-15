@@ -1,0 +1,9 @@
+i.icon {
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+i.icon svg {
+  width: 16px;
+  fill: #e8e8e8;
+  margin: 0 4px -3px 0;
+}

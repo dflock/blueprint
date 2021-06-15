@@ -89,27 +89,16 @@
     />
     {% endif %}
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-      <script src="{{ SITEURL }}/theme/js/html5.js"></script>
-    <![endif]-->
     <!-- Le styles -->
     <link
       href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css"
       rel="stylesheet"
     />
-    {# Comment this out until I fix the BundleError: #} {% assets
-    output="css/css/style.min.css", "css/fontello.css", "css/main.css",
+    {% assets output="css/style.min.css", "css/icons.css", "css/main.css",
     "css/pygments-monokai.css" %}
     <link rel="stylesheet" media="all" href="{{ SITEURL }}/{{ ASSET_URL }}" />
-    {% endassets %} {#
-    <link href="{{ SITEURL }}/theme/css/fontello.css" rel="stylesheet" />
-    <link href="{{ SITEURL }}/theme/css/main.css" rel="stylesheet" />
-    <link
-      href="{{ SITEURL }}/theme/css/pygments-monokai.css"
-      rel="stylesheet"
-    />
-    #} {# These webfonts seem to break if I merge them into one call. #}
+    {% endassets %} {# These webfonts seem to break if I merge them into one
+    call. #}
     <link
       href="https://fonts.googleapis.com/css?family=Bitter:400,400italic|Droid+Serif:400&display=swap"
       rel="stylesheet"

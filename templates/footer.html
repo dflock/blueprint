@@ -1,62 +1,78 @@
-    <!--footer-->
-    <footer class="blog-footer hidden-print">
-        <div class="container">
-            <div class="row-fluid">
-
-                <div class="site-nav span2">
-                    <h4 class="nav-header">Site</h4>
-                    <ul class="nav nav-list" id="site-links">
-                        <li><a href="{{ SITEURL }}"><i class="icon-home"></i>Home</a></li>
-                        <li><a href="{{ SITEURL }}/blog/"><i class="icon-list"></i>Archives</a></li>
-                        <li><a href="{{ SITEURL }}/tags.html"><i class="icon-tags"></i>Tags</a></li>
-                        {% if FEED_RSS or FEED_ATOM %}
-                        <li class="feeds">
-                            <i class="icon-rss"></i>
-                            {% if FEED_RSS %}<a href="{{ SITEURL }}/{{ FEED_RSS }}" rel="alternate">RSS</a>{% endif %}
-                            {% if FEED_ATOM %}<a href="{{ SITEURL }}/{{ FEED_ATOM }}" rel="alternate">Atom</a>{% endif %}
-                        </li>
-                        {% endif %}
-                    </ul>
-                </div>
-
-                {% if SOCIAL %}
-                <div class="social span2" id="socialist">
-                    <h4 class="nav-header">Social</h4>
-                    <ul class="nav nav-list">
-                        {% for anchor_text, name, link in SOCIAL %}
-                        <li><a itemprop="sameAs" href="{{ link }}" rel="author"><i class="icon-{{ name }}"></i>{{anchor_text}}</a></li>
-                        {% endfor %}
-
-                        {% if EMAIL%}
-                        <a href="mailto:{{ EMAIL}}"><i class="icon-envelope"></i> email</a>
-                        {% endif %}
-                    </ul>
-                </div>
-                {% endif %}
-
-                {% if LINKS %}
-                <div class="links span2">
-                    <h4 class="nav-header">Links</h4>
-                    <ul class="nav nav-list">
-                        {% for anchor_text, name, link in LINKS %}
-                        <li><a href="{{ link }}" rel="author"><i class="icon-{{ name }}"></i>{{anchor_text}}</a></li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                {% endif %}
-
-            {% include "colophon.html" %}
-
-            </div> <!--end of fluid row-->
-            <hr />
-            <p>
-                <small>
-                    Designed, built, drawn, written <span class="amp">&amp;</span> &copy; {{ COPYRIGHT_FROM }}-{{ COPYRIGHT_UNTIL }} <a href="{{ SITEURL }}">{{ AUTHOR }}</a><br />
-                    Powered by <a href="http://github.com/getpelican/pelican">Pelican</a> and
-                    <a href="https://twitter.github.com/bootstrap">Twitter Bootstrap</a>.
-                    Icons via <a href="http://fontello.com/">Fontello</a>.
-                </small>
-            </p>
-        </div> <!--end of blog-footer-->
-    </footer> <!--end of container -->
-    <!--/footer-->
+<!--footer-->
+<footer class="blog-footer hidden-print">
+  <div class="container">
+    <div class="row-fluid">
+      {% if SITE_LINKS %}
+      <div class="site-nav span2">
+        <h4 class="nav-header">Site</h4>
+        <ul class="nav nav-list" id="site-links">
+          {% for anchor_text, icon, link in SITE_LINKS %}
+          <li>
+            <a href="{{ link }}"><i class="icon">{{icon}}</i>{{anchor_text}}</a>
+          </li>
+          {% endfor %} {% if FEED_RSS or FEED_ATOM %}
+          <li class="feeds">
+            <i class="icon">{{ICONS['feed']}}</i>
+            {% if FEED_RSS %}<a
+              href="{{ SITEURL }}/{{ FEED_RSS }}"
+              rel="alternate"
+              >RSS</a
+            >{% endif %} {% if FEED_ATOM %}<a
+              href="{{ SITEURL }}/{{ FEED_ATOM }}"
+              rel="alternate"
+              >Atom</a
+            >{% endif %}
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+      {% endif %} {% if SOCIAL %}
+      <div class="social span2" id="socialist">
+        <h4 class="nav-header">Social</h4>
+        <ul class="nav nav-list">
+          {% for anchor_text, icon, link in SOCIAL %}
+          <li>
+            <a itemprop="sameAs" href="{{ link }}" rel="author"
+              ><i class="icon">{{icon}}</i>{{anchor_text}}</a
+            >
+          </li>
+          {% endfor %} {% if EMAIL%}
+          <a href="mailto:{{ EMAIL}}"
+            ><i class="icon">{{ICONS['email']}}</i> email</a
+          >
+          {% endif %}
+        </ul>
+      </div>
+      {% endif %} {% if LINKS %}
+      <div class="links span2">
+        <h4 class="nav-header">Links</h4>
+        <ul class="nav nav-list">
+          {% for anchor_text, icon, link in LINKS %}
+          <li>
+            <a href="{{ link }}" rel="author"
+              ><i class="icon">{{icon}}</i>{{anchor_text}}</a
+            >
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %} {% include "colophon.html" %}
+    </div>
+    <!--end of fluid row-->
+    <hr />
+    <p>
+      <small>
+        Designed, built, drawn, written <span class="amp">&amp;</span> &copy; {{
+        COPYRIGHT_FROM }}-{{ COPYRIGHT_UNTIL }}
+        <a href="{{ SITEURL }}">{{ AUTHOR }}</a><br />
+        Powered by
+        <a href="https://github.com/getpelican/pelican">Pelican</a> and
+        <a href="https://twitter.github.com/bootstrap">Twitter Bootstrap</a>.
+        Icons via <a href="https://fontawesome.com/">Fontello</a>.
+      </small>
+    </p>
+  </div>
+  <!--end of blog-footer-->
+</footer>
+<!--end of container -->
+<!--/footer-->

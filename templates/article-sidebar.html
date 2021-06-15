@@ -21,7 +21,8 @@
       </span>
     </p>
     <p>
-      <i class="muted icon-clock"></i>{{ article.stats['read_mins'] }} min read,
+      <i class="icon muted">{{ICONS['clock']}}</i>{{ article.stats['read_mins']
+      }} min read,
       <span itemprop="wordCount">{{ article.stats['wc'] }} words.</span>
     </p>
     <span itemprop="timeRequired" class="hidden"
@@ -53,7 +54,7 @@
     <ul class="tag-list">
       {% for tag in article.tags|sort %}
       <li class="tag">
-        <i class="icon-tags muted"></i
+        <i class="muted icon">{{ICONS['tag']}}</i
         ><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
       </li>
       {% endfor %}

@@ -429,6 +429,7 @@ h1 {
 .content figure img {
   display: table-row;
   max-width: max-content;
+  /* max-width: 100%; */
   border: none;
   box-shadow: none;
   margin: 0;
