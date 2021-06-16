@@ -1,27 +1,35 @@
-{% extends "base.html" %}
-{% block title %}{{ SITENAME }} &middot; Tags{% endblock %}
-{% block description %}Everything on {{ SITENAME }}, organised by Tag.{% endblock %}
-{% block content %}
+{% extends "base.html" %} {% block title %}{{ SITENAME }} &middot; Tags{%
+endblock %} {% block description %}Everything on {{ SITENAME }}, organised by
+Tag.{% endblock %} {% block content %}
 
-    <h1>Tags</h1>
+<h1>Tags</h1>
 
-    <h2>By Name</h2>
+<h2>By Name</h2>
 
-    <ul class="tag-list">
-    {% for tag, articles in tags %}
-        <li class="tag"><i class="icon-tags muted"></i><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }} <span class="muted">[{{ articles|count }}]</span></a></li>
-    {% endfor %}
-    </ul>
+<ul class="tag-list">
+  {% for tag, articles in tags %}
+  <li class="tag">
+    <i class="icon-tags"></i
+    ><a href="{{ SITEURL }}/{{ tag.url }}"
+      >{{ tag }} <span>[{{ articles|count }}]</span></a
+    >
+  </li>
+  {% endfor %}
+</ul>
 
-	<hr />
+<hr />
 
-	<h2>By Frequency</h2>
+<h2>By Frequency</h2>
 
-    <ul class="tag-list">
-    {% for tag, articles in tags|tagsort %}
-        <li class="tag"><i class="icon-tags muted"></i><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }} <span class="muted">[{{ articles|count }}]</span></a></li>
-    {% endfor %}
-    </ul>
-
+<ul class="tag-list">
+  {% for tag, articles in tags|tagsort %}
+  <li class="tag">
+    <i class="icon-tags"></i
+    ><a href="{{ SITEURL }}/{{ tag.url }}"
+      >{{ tag }} <span>[{{ articles|count }}]</span></a
+    >
+  </li>
+  {% endfor %}
+</ul>
 
 {% endblock %}

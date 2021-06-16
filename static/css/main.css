@@ -83,6 +83,7 @@ h1 {
 }
 
 .smallprint {
+  color: var(--text-color-muted);
   font-size: 85%;
   font-style: italic;
   line-height: 1.25;
@@ -649,7 +650,7 @@ tt.literal {
   padding: 0.3em 0.5em;
 }
 .tag .muted {
-  color: #bbb;
+  color: var(--text-color-muted);
 }
 
 /* Styles for the Archives */
@@ -694,7 +695,7 @@ Styles for my CV
   color: #999;
 }
 .hresume .boxout {
-  border: 1px solid #ccc;
+  border: 1px solid var(--img-border-color);
   border-radius: 4px;
   padding: 1em;
   background-color: #efefef;
@@ -704,7 +705,7 @@ Styles for my CV
   margin: 0 auto 0 auto;
 }
 .hresume i {
-  color: #999;
+  color: var(--text-color-muted);
 }
 
 .hresume .experience h4 {
@@ -712,7 +713,6 @@ Styles for my CV
 }
 .hresume .experience .smallprint p {
   text-align: right;
-  color: #888;
 }
 .hresume .experience .job_description p {
   line-height: 1.3;
@@ -722,7 +722,7 @@ Styles for my CV
   float: right;
   margin-top: -1em;
   font-variant: small-caps;
-  color: #999;
+  color: var(--text-color-muted);
 }
 
 /*

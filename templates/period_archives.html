@@ -16,13 +16,13 @@ Date.{% endblock %} {% block content %}
     <tr>
       <td>
         {{ article.date|archive_date_format }}<br />
-        <span class="muted smallprint"
+        <span class="smallprint"
           >{{ article.stats['read_mins'] }} min read</span
         >
       </td>
       <td>
         <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a><br />
-        <p class="muted smallprint">{{ article.meta_description }}</p>
+        <p class="smallprint">{{ article.meta_description }}</p>
       </td>
     </tr>
     {% endfor %}
