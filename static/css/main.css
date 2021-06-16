@@ -1,8 +1,26 @@
+/* CSS Variables */
+:root {
+  --border-radius: 4px;
+  --text-color-dark: #001;
+  --text-color-muted: #666;
+  --text-color-light: #e8e8e8;
+
+  --link-color: #0a5693;
+
+  --content-background: #fff;
+  --header-background: #2c71b8;
+  --footer-background: #2c71b8;
+  --admonition-background: #2c71b8;
+
+  --img-border-color: #bbb;
+  --sidebar-icon-color: #bbb;
+}
 /* Styling for elements */
 body {
   font-family: "Bitter", Georgia, serif;
   font-size: 1em;
   line-height: 1.5;
+  background-color: var(--content-background);
 }
 p {
   margin: 0.8em 0;
@@ -13,7 +31,7 @@ p {
   hyphens: auto;
 }
 a {
-  color: #0a5693;
+  color: var(--link-color);
 }
 a:hover {
   text-decoration: underline;
@@ -35,10 +53,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Droid Serif", Georgia, serif;
+  font-family: "Noto Serif", Georgia, serif;
   font-weight: normal;
-  color: #001;
-  /*margin-bottom: 0px;*/
+  color: var(--text-color-dark);
   line-height: 1;
 }
 h1 {
@@ -52,8 +69,8 @@ h1 {
 
 /* Classes for Typographics Niceties */
 .amp {
-  font-family: "Gabriela", sans-serif;
-  color: #666;
+  font-family: "Noto Serif", serif;
+  color: var(--text-color-muted);
   /*font-style: italic;*/
 }
 .caps {
@@ -84,33 +101,34 @@ h1 {
 .blog-header,
 .blog-footer {
   padding: 16px 0;
-  background: #2c71b8 url(/images/blueprint-background.png) repeat;
-  color: #fff;
+  background: var(--footer-background) url(/images/blueprint-background.png)
+    repeat;
+  color: var(--text-color-light);
   margin-bottom: 1em;
 }
 .blog-header a {
-  color: #fff;
+  color: var(--text-color-light);
   border-radius: 3px;
   border: 1px solid transparent;
 }
 .blog-header .nav li a:hover {
-  background-color: #2c71b8;
+  background-color: var(--header-background);
   border: 1px solid #fff;
 }
 .blog-header .nav li.active a {
   background-color: #fff;
-  color: #2c71b8;
+  color: var(--header-background);
 }
+
 /* Currently used in the site header */
 .brand {
-  font-family: "Droid Serif", Georgia, serif;
+  font-family: "Noto Serif", Georgia, serif;
   font-weight: normal;
   font-size: 5.063em;
   line-height: 1;
   margin-top: 0.2em;
   display: block;
-  /*color: #001;*/
-  color: #fff;
+  color: var(--text-color-light);
 }
 
 .navbar .nav > li > a {
@@ -127,7 +145,7 @@ h1 {
 #blog-nav {
   padding: 5px 0;
   font-size: 16px;
-  margin-top: 20px;
+  margin-top: 0.2em;
 }
 
 /* Footer */
@@ -136,17 +154,17 @@ h1 {
   margin: 1em 0 0 0;
 }
 .blog-footer a {
-  color: #fff;
+  color: var(--text-color-light);
   border-radius: 3px;
   border: 1px solid transparent;
 }
 .blog-footer .nav li a:hover {
-  background-color: #2c71b8;
+  background-color: var(--footer-background);
   border: 1px solid #fff;
 }
 .blog-footer .nav li.active a {
   background-color: #fff;
-  color: #2c71b8;
+  color: var(--footer-background);
 }
 .blog-footer li {
   text-align: left;
@@ -177,19 +195,18 @@ h1 {
 }
 .nav-list li a {
   padding-right: 0;
-  color: #fff;
+  color: var(--text-color-light);
   text-shadow: none;
 }
 .nav-list li i {
-  color: #1f334b;
-  color: #e8e8e8;
+  color: var(--text-color-light);
 }
 .blog-footer h4 {
-  /*font-family: 'Droid Serif', Georgia, serif;*/
+  /*font-family: 'Noto Serif', Georgia, serif;*/
   font-size: 100%;
   padding-left: 0;
   margin: 0 0 0.2em 0;
-  color: #fff;
+  color: var(--text-color-light);
   text-shadow: none;
 }
 .blog-footer hr {
@@ -197,7 +214,7 @@ h1 {
   margin: 1em 0 0 0;
 }
 .blog-footer .amp {
-  color: #efefef;
+  color: var(--text-color-light);
 }
 
 #colophon {
@@ -227,7 +244,7 @@ h1 {
 /* Article Sidebar */
 .article-sidebar {
   text-align: left;
-  color: #888;
+  color: var(--text-color-muted);
   font-size: 90%;
 }
 .article-sidebar .span10 {
@@ -240,7 +257,7 @@ h1 {
 }
 .article-sidebar .by {
   font-style: italic;
-  color: #bbb;
+  color: var(--text-color-muted);
 }
 .article-sidebar p.social_widgets {
   margin-bottom: 0;
@@ -271,7 +288,6 @@ h1 {
 }
 .article-sidebar .contents ul ul {
   margin: 0 0 0.5em 0.7em;
-  /*list-style-type: circle;*/
 }
 
 .article-sidebar nav.toc ul {
@@ -286,7 +302,7 @@ h1 {
 }
 
 .content .article-sidebar h4 {
-  color: #888;
+  color: var(--text-color-muted);
 }
 
 /* Article Blockquotes */
@@ -318,7 +334,7 @@ h1 {
   text-align: left;
 }
 .content .footnote td.label {
-  background-color: #fff;
+  background-color: var(--content-background);
   text-shadow: none;
   border-radius: 0;
   padding: 0;
@@ -336,10 +352,10 @@ h1 {
 /* Styles for Figures & Images */
 
 .content img {
-  border: 1px solid #bbb;
-  border-radius: 3px;
-  padding: 4px;
-  background: #fff;
+  border: 1px solid var(--img-border-color);
+  border-radius: var(--border-radius);
+  padding: 0.5rem;
+  background: var(--content-background);
   float: left;
   margin: 1em 1em 1em 0;
   box-shadow: 4px 4px 4px 0 rgba(128, 128, 128, 0.5);
@@ -365,58 +381,18 @@ h1 {
   box-shadow: none;
 }
 
-/* Old style figures */
-
-.content .figure {
-  border: 1px solid #bbb;
-  border-radius: 3px;
-  padding: 4px;
-  float: left;
-  margin: 0 1em 1em 0;
-  box-shadow: 4px 4px 4px 0 rgba(128, 128, 128, 0.5);
-  background: #fff;
-}
-.content .figure.align-right {
-  float: right;
-  margin: 0 0 1em 1em;
-}
-.content .figure.align-left {
-  float: left;
-}
-.content .figure img {
-  border: none;
-  border-radius: 0;
-  padding: 0;
-  margin: 0;
-  box-shadow: none;
-
-  float: left;
-}
-.content .figure p.caption {
-  margin: 0;
-  font-size: 80%;
-  padding: 8px;
-  float: left;
-  text-align: left;
-}
-
-.legend .amp {
-  color: #bbb;
-}
-
 /* New style html5 figures */
 .content figure {
   display: table;
-  /* max-width: 100%; */
-  width: 1px;
-  margin: 0;
-
-  border: 1px solid #bbb;
-  border-radius: 3px;
-  border-spacing: 6px;
-  background: #fff;
+  max-width: 100%;
   float: left;
+
+  border: 1px solid var(--img-border-color);
+  border-bottom: none;
+  border-radius: 4px;
+  background: var(--content-background);
   margin: 0 1em 1em 0;
+  padding: 0.5rem 0.5rem 0.25rem 0.5rem;
   box-shadow: 4px 4px 4px 0 rgba(128, 128, 128, 0.5);
 }
 .content figure.align-right {
@@ -427,17 +403,28 @@ h1 {
   float: left;
 }
 .content figure img {
-  display: table-row;
-  max-width: max-content;
-  /* max-width: 100%; */
+  display: block;
+  max-width: 100%;
+  height: auto;
   border: none;
   box-shadow: none;
   margin: 0;
   padding: 0;
 }
 .content figcaption {
-  display: table-row;
-  padding: 0.5rem;
+  padding: 0.25rem 0.5rem 0.5rem 0.5rem;
+
+  display: table-caption;
+  caption-side: bottom;
+
+  border: 1px solid var(--img-border-color);
+  border-top: none;
+  background-color: var(--content-background);
+  box-shadow: 4px 4px 4px 0 rgba(128, 128, 128, 0.5);
+  border-radius: 4px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  margin-top: -2px;
   font-size: 80%;
 }
 .content figcaption .amp {
@@ -474,8 +461,8 @@ h1 {
 .content div.note,
 .content div.caution {
   padding: 0.25em 1em;
-  background: #2c71b8 url(/images/blueprint-background.png);
-  color: #fff;
+  background: var(--admonition-background) url(/images/blueprint-background.png);
+  color: var(--text-color-light);
   border: 1px solid #3c7cbd;
   border-radius: 4px;
 }
@@ -486,12 +473,12 @@ h1 {
 }
 .content div.note .amp,
 .content div.caution .amp {
-  color: #fff;
+  color: var(--text-color-light);
 }
 
 .content div.note a,
 .content div.caution a {
-  color: #fff;
+  color: var(--text-color-light);
   text-decoration: underline;
 }
 
@@ -510,25 +497,25 @@ h1 {
 .content aside.note,
 .content section.caution {
   padding: 0.25em 1em;
-  background: #2c71b8 url(/images/blueprint-background.png);
-  color: #fff;
+  background: var(--admonition-background) url(/images/blueprint-background.png);
+  color: var(--text-color-light);
   border: 1px solid #3c7cbd;
   border-radius: 4px;
 }
 .content .admonition-block h6 {
-  color: #fff;
+  color: var(--text-color-light);
   font-size: 150%;
   font-weight: bold;
   margin: 0.5em 0 0.5rem 0;
 }
 .content aside.note .amp,
 .content section.caution .amp {
-  color: #fff;
+  color: var(--text-color-light);
 }
 
 .content aside.note a,
 .content section.caution a {
-  color: #fff;
+  color: var(--text-color-light);
   text-decoration: underline;
 }
 
@@ -554,6 +541,10 @@ h1 {
 }
 .highlight {
   border-radius: 5px;
+}
+.content code,
+.content pre {
+  font-family: "PT Mono", Monaco, Menlo, Consolas, monospace;
 }
 div.content code {
   font-size: initial;

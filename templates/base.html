@@ -97,15 +97,14 @@
     {% assets output="css/style.min.css", "css/icons.css", "css/main.css",
     "css/pygments-monokai.css" %}
     <link rel="stylesheet" media="all" href="{{ SITEURL }}/{{ ASSET_URL }}" />
-    {% endassets %} {# These webfonts seem to break if I merge them into one
-    call. #}
+    {% endassets %}
     <link
-      href="https://fonts.googleapis.com/css?family=Bitter:400,400italic|Droid+Serif:400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bitter:ital@0;1&family=Noto+Serif&family=PT+Mono&display=swap"
       rel="stylesheet"
       type="text/css"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Gabriela&amp;text=%26%C2%A7|PT+Mono&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Gabriela&text=%26%C2%A7&display=swap"
       rel="stylesheet"
       type="text/css"
     />
@@ -147,13 +146,17 @@
           </div>
           <div class="span4" id="blog-nav">
             <ul class="nav nav-pills pull-right">
+            {% if DISPLAY_CATEGORIES_ON_MENU %}
               {% for cat, null in categories %}
               <li {% if cat == category %} class="active" {% endif %}>
                 <a href="{{ SITEURL }}/{{ cat.url }}">
                   <i class="icon">{% if cat == category %}{{ICONS['category_active']}}{% else %}{{ICONS['category']}}{% endif %}</i>{{ cat }}
                 </a>
               </li>
-              {% endfor %} {% if DISPLAY_PAGES_ON_MENU %} {% for page in PAGES
+              {% endfor %} 
+              {% endif %}
+              
+              {% if DISPLAY_PAGES_ON_MENU %} {% for page in PAGES
               %}
               <li>
                 <a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>
@@ -185,9 +188,6 @@
     </div>
 
     {% include "footer.html" %}
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 
     {% include "analytics.html" %}
   </body>

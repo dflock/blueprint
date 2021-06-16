@@ -8,3 +8,11 @@ i.icon svg {
   vertical-align: -0.125em;
   margin: 0 4px 0 0;
 }
+
+.article-sidebar i.icon svg {
+  fill: var(--sidebar-icon-color);
+}
+
+.blog-header .nav li.active i.icon svg {
+  fill: var(--header-background);
+}
