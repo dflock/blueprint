@@ -3,15 +3,10 @@
   lang="en"
   itemscope="itemscope"
   itemtype="http://schema.org/{% block pageschema %}WebPage{% endblock %}"
-  {%
-  if
-  OPEN_GRAPH_METADATA
-  %}
+  {% if OPEN_GRAPH_METADATA %}
   xmlns:og="http://ogp.me/ns#"
   xmlns:fb="https://www.facebook.com/2008/fbml"
-  {%
-  endif
-  %}
+  {% endif %}
 >
   <head>
     <meta charset="utf-8" />
@@ -23,9 +18,6 @@
 
     <link rel="dns-prefetch" href="//fonts.gstatic.com" />
     <link rel="preconnect" href="//fonts.gstatic.com" crossorigin />
-
-    <link rel="dns-prefetch" href="//netdna.bootstrapcdn.com" />
-    <link rel="preconnect" href="//netdna.bootstrapcdn.com" crossorigin />
 
     <link rel="dns-prefetch" href="//themes.googleusercontent.com" />
     <link rel="dns-prefetch" href="//google-analytics.com" />
@@ -98,11 +90,7 @@
     {% endif %}
 
     <!-- Le styles -->
-    <link
-      href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css"
-      rel="stylesheet"
-    />
-    {% assets output="css/style.min.css", "css/icons.css", "css/main.css",
+    {% assets filters="cssmin", output="css/style.min.css", "css/bs5/bootstrap-reboot.css", "css/variables.css", "css/utility-classes.css", "css/icons.css", "css/main.css",
     "css/pygments-monokai.css" %}
     <link rel="stylesheet" media="all" href="{{ SITEURL }}/{{ ASSET_URL }}" />
     {% endassets %}
