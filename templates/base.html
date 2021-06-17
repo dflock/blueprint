@@ -18,13 +18,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href="//fonts.googleapis.com" rel="dns-prefetch" />
-    <link href="//themes.googleusercontent.com" rel="dns-prefetch" />
-    <link href="//fonts.gstatic.com" rel="dns-prefetch" />
-    <link href="//netdna.bootstrapcdn.com" rel="dns-prefetch" />
-    <link href="//ajax.googleapis.com" rel="dns-prefetch" />
-    <link href="//google-analytics.com" rel="dns-prefetch" />
-    <link href="//www.google-analytics.com" rel="dns-prefetch" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin />
+
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin />
+
+    <link rel="dns-prefetch" href="//netdna.bootstrapcdn.com" />
+    <link rel="preconnect" href="//netdna.bootstrapcdn.com" crossorigin />
+
+    <link rel="dns-prefetch" href="//themes.googleusercontent.com" />
+    <link rel="dns-prefetch" href="//google-analytics.com" />
+    <link rel="dns-prefetch" href="//www.google-analytics.com" />
+
+    <link rel="preload" href="/theme/css/fonts/Gabriela.woff2" as="font" type="font/woff2" crossorigin />
+
 
     <title>
       {% block title %}{{ SITE_TITLE }} &middot; {{ SITENAME }}{% endblock %}
@@ -100,11 +108,11 @@
     {% endassets %}
     <link
       href="https://fonts.googleapis.com/css2?family=Bitter:ital@0;1&family=Noto+Serif&family=PT+Mono&display=swap"
-      rel="stylesheet"
-      type="text/css"
+      rel="preload"
+      as="style"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Gabriela&text=%26%C2%A7&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bitter:ital@0;1&family=Noto+Serif&family=PT+Mono&display=swap"
       rel="stylesheet"
       type="text/css"
     />
