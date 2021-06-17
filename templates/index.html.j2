@@ -31,8 +31,8 @@
                 <div class="summary span9 content">
                     {{ article.summary }}
                     <br />
-                    <a class="btn" href="{{ SITEURL }}/{{ article.url }}">
-                    <i class="icon-plus-circled"></i> Read More </a>
+                    <a class="read-more" href="{{ SITEURL }}/{{ article.url }}">
+                    {% if ICONS['read-more'] %}<i class="icon">{{ICONS['read-more']}}</i> {% endif %}Read More </a>
                     <hr />
                 </div>
             </div>
