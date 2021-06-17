@@ -58,6 +58,17 @@ li p {
   margin: 0 auto;
 }
 
+dl {
+  font-size: 1.15em;
+}
+dt {
+  font-size: 1.1em;
+}
+dt,
+dd {
+  line-height: 1.5;
+}
+
 h1,
 h2,
 h3,
@@ -324,6 +335,10 @@ h1 {
 .content blockquote p {
   font-size: 0.9rem;
   font-style: italic;
+}
+
+.content p:first-of-type {
+  margin-top: 0;
 }
 
 /* Styles for article footnotes */
