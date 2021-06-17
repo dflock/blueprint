@@ -64,9 +64,9 @@
   {% if TWITTER_USERNAME and ARTICLE_TWEET_BUTTON %}
   <div class="span10 social_widgets">
     <br />
-    {% include "twitter.html" %}
+    {% include "twitter.html.j2" %}
   </div>
   {% endif %} {% if ARTICLE_GOOGLEPLUS_BUTTON %}
-  <div class="span10">{% include "googleplus.html" %}</div>
+  <div class="span10">{% include "googleplus.html.j2" %}</div>
   {% endif %}
 </div>

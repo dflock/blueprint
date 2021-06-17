@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base.html.j2" %}
 {% block title %}{{ page.title|striptags|escape }} &middot; {{ SITENAME }}{% endblock %}
 {% block description %}{{ page.meta_description|d(page.summary|striptags|escape) }}{% endblock %}
 {% block twittercard %}

@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base.html.j2" %}
 
 {% block pageschema %}{{ article.schema|d(DEFAULT_PAGESCHEMA) }}{% endblock %}
 
@@ -65,9 +65,9 @@
 
     <div class="row-fluid">
         <aside class="article-sidebar span3">
-            {% include "article-sidebar.html" %}
-            {% include "article-sidebar-multipart.html" %}
-            {% include "article-sidebar-toc.html" %}
+            {% include "article-sidebar.html.j2" %}
+            {% include "article-sidebar-multipart.html.j2" %}
+            {% include "article-sidebar-toc.html.j2" %}
         </aside>
 
         <section class="content span9" itemprop="text articleBody">
@@ -115,7 +115,7 @@
 
             <div class="row-fluid">
                 <h3 id="article-comments-section">Comments</h3>
-                {% include 'disqus.html' %}
+                {% include 'disqus.html.j2' %}
             </div>
         </section>
     </div>
