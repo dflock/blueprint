@@ -1,41 +1,21 @@
-/* CSS Variables */
-:root {
-  --border-radius: 4px;
-  --text-color-dark: #001;
-  --text-color-muted: #666;
-  --text-color-light: #e8e8e8;
-
-  --link-color: #0a5693;
-
-  --content-background: #fff;
-  --header-background: #2c71b8;
-  --footer-background: #2c71b8;
-  --admonition-background: #2c71b8;
-
-  --img-border-color: #bbb;
-  --sidebar-icon-color: #bbb;
-}
-
 /* Fonts */
 @font-face {
-  font-family: "Gabriela";
+  /* This is for flourishes and only includes the following chars: & § */
+  font-family: 'Gabriela';
   font-style: normal;
   font-weight: 400;
-  src: url("./fonts/Gabriela.woff2");
+  src: url('./fonts/Gabriela.woff2');
   font-display: swap;
   unicode-range: U+0020, U+0026, U+00A7;
 }
 
 /* Styling for elements */
 body {
-  font-family: "Bitter", Georgia, serif;
-  font-size: 1em;
-  line-height: 1.5;
+  font-family: var(--font-body);
   background-color: var(--content-background);
 }
 p {
-  margin: 0.8em 0;
-  font-size: 1.15em;
+  font-size: 1.15rem;
 
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -44,30 +24,27 @@ p {
 a {
   color: var(--link-color);
 }
-a:hover {
-  text-decoration: underline;
-}
 
-ul {
+/* ul {
   margin: 0.8em 1.5em;
 }
 li {
   line-height: 1.5;
-}
-li p {
+} */
+/* li p {
   margin: 0 auto;
-}
+} */
 
 dl {
-  font-size: 1.15em;
+  font-size: 1.15rem;
 }
 dt {
-  font-size: 1.1em;
+  font-size: 1.1rem;
 }
-dt,
+/* dt,
 dd {
   line-height: 1.5;
-}
+} */
 
 h1,
 h2,
@@ -75,7 +52,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Noto Serif", Georgia, serif;
+  font-family: var(--font-heading);
   font-weight: normal;
   color: var(--text-color-dark);
   line-height: 1;
@@ -84,67 +61,33 @@ h1 {
   font-size: 3.375em;
 }
 
-.table th,
-.table td {
-  line-height: 1.3;
-}
-
-/* Classes for Typographic Niceties */
-.amp {
-  font-family: "Gabriela", Georgia, serif;
-  color: var(--text-color-muted);
-}
-.caps {
-  font-size: 0.92em;
-  font-variant: small-caps;
-}
-.day_suffix {
-  vertical-align: super;
-  font-size: 70%;
-}
-
-.smallprint {
-  color: var(--text-color-muted);
-  font-size: 85%;
-  font-style: italic;
-  line-height: 1.25;
-}
-
-/* Styling for multiple column things */
-.two-columns ul {
-  column-count: 2;
-}
-.three-columns ul {
-  column-count: 3;
-}
-
 /* Styling for Nav bar. Bg color, link color etc */
 
-.blog-header,
-.blog-footer {
+header,
+footer {
   padding: 16px 0;
   background: var(--footer-background) url(/images/blueprint-background.png)
     repeat;
   color: var(--text-color-light);
   margin-bottom: 1em;
 }
-.blog-header a {
+header a {
   color: var(--text-color-light);
   border-radius: 3px;
   border: 1px solid transparent;
 }
-.blog-header .nav li a:hover {
+header .nav li a:hover {
   background-color: var(--header-background);
   border: 1px solid #fff;
 }
-.blog-header .nav li.active a {
+header .nav li.active a {
   background-color: #fff;
   color: var(--header-background);
 }
 
 /* Currently used in the site header */
 .brand {
-  font-family: "Noto Serif", Georgia, serif;
+  font-family: var(--font-heading);
   font-weight: normal;
   font-size: 5.063em;
   line-height: 1;
@@ -171,43 +114,43 @@ h1 {
 }
 
 /* Footer */
-.blog-footer {
+footer {
   padding: 1em 2em;
   margin: 1em 0 0 0;
 }
-.blog-footer a {
+footer a {
   color: var(--text-color-light);
   border-radius: 3px;
   border: 1px solid transparent;
 }
-.blog-footer .nav li a:hover {
+footer .nav li a:hover {
   background-color: var(--footer-background);
   border: 1px solid #fff;
 }
-.blog-footer .nav li.active a {
+footer .nav li.active a {
   background-color: #fff;
   color: var(--footer-background);
 }
-.blog-footer li {
+footer li {
   text-align: left;
   line-height: 1;
   margin-bottom: 0;
 }
-.blog-footer p small {
+footer p small {
   font-size: 75%;
 }
-.blog-footer #socialist {
+footer #socialist {
   width: 19%;
 }
 
-.blog-footer li.feeds a {
+footer li.feeds a {
   display: inline-block;
   padding: 3px;
   margin: 0 3px 0 -6px;
 }
 
 .nav-header {
-  font-family: sans-serif;
+  font-family: var(--font-sans);
   padding-left: 0;
 }
 .nav-list {
@@ -223,19 +166,18 @@ h1 {
 .nav-list li i {
   color: var(--text-color-light);
 }
-.blog-footer h4 {
-  /*font-family: 'Noto Serif', Georgia, serif;*/
+footer h4 {
   font-size: 100%;
   padding-left: 0;
   margin: 0 0 0.2em 0;
   color: var(--text-color-light);
   text-shadow: none;
 }
-.blog-footer hr {
+footer hr {
   /*width: 90%;*/
   margin: 1em 0 0 0;
 }
-.blog-footer .amp {
+footer .amp {
   color: var(--text-color-light);
 }
 
@@ -570,7 +512,7 @@ h1 {
 }
 .content code,
 .content pre {
-  font-family: "PT Mono", Monaco, Menlo, Consolas, monospace;
+  font-family: var(--font-mono);
 }
 div.content code {
   font-size: initial;
@@ -581,7 +523,7 @@ div.content code {
   overflow-wrap: break-word;
 }
 .highlight pre {
-  font-family: "PT Mono", Menlo, Monaco, Consolas, monospace;
+  font-family: var(--font-mono);
   background-color: #090916;
   color: #f8f8f2;
   font-size: 90%;
@@ -592,9 +534,8 @@ div.content code {
   border: none;
 }
 tt.literal {
-  font-family: "PT Mono", Menlo, Monaco, Consolas, monospace;
+  font-family: var(--font-mono);
   background-color: #dedede;
-  /*font-size: 110%;*/
   padding: 0.15em 0.2em 0 0.2em;
   border-radius: 3px;
   line-height: 1;
@@ -610,14 +551,14 @@ tt.literal {
   float: none;
 }
 .content h2 {
-  font-size: 2.25em;
-  margin-top: 1em;
+  font-size: 2.25rem;
+  margin-top: 2rem;
 }
 .content h3 {
-  font-size: 1.6em;
+  font-size: 1.6rem;
 }
 .content h4 {
-  font-size: 1.3em;
+  font-size: 1.3rem;
 }
 
 .content hr {
@@ -625,23 +566,16 @@ tt.literal {
   text-align: center;
   height: 24px;
 
-  background-image: url('data:image/svg+xml;utf8,<svg width="160px" height="1px" viewBox="0 0 160 1" xmlns="http://www.w3.org/2000/svg"><path d="M0 0 H 160" stroke="%23333"/></svg>');
-  background-repeat: repeat-x;
-  background-position: 50%;
+  background: repeat-x 50%
+    url('data:image/svg+xml;utf8,<svg width="160px" height="1px" viewBox="0 0 160 1" xmlns="http://www.w3.org/2000/svg"><path d="M0 0 H 160" stroke="%23333"/></svg>')
+    var(--content-background);
 }
 .content hr::after {
   color: #aaa;
-  font-family: "Gabriela", sans-serif;
-  content: "§";
+  font-family: var(--font-flourish);
+  content: '§';
   padding: 0 0.5em;
   background: white;
-}
-
-/* Styling for the "other entries" section */
-
-/* Metadata */
-.well.small {
-  padding: 6px 6px 4px;
 }
 
 /* Read more button */
@@ -825,7 +759,7 @@ table.enumbers {
     font-size: 250%;
     padding-left: 0.5em;
   }
-  .blog-header {
+  header {
     padding: 0;
   }
   #blog-nav {

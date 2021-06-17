@@ -1,0 +1,34 @@
+/* CSS Variables */
+:root {
+  --blueprint-blue: #2c71b8;
+
+  --border-radius: 0.2rem;
+  --text-color-dark: #001;
+  --text-color-muted: #666;
+  --text-color-light: #e8e8e8;
+
+  --link-color: #0a5693;
+
+  --content-background: #fff;
+  --header-background: var(--blueprint-blue);
+  --footer-background: var(--blueprint-blue);
+  --admonition-background: var(--blueprint-blue);
+
+  --img-border-color: #bbb;
+  --icon-color-content: #bbb;
+  --icon-color-header: #e8e8e8;
+  --icon-color-footer: #e8e8e8;
+
+  --font-stack-serif: Constantia, 'Lucida Bright', Lucidabright, 'Lucida Serif',
+    Lucida, 'DejaVu Serif', 'Bitstream Vera Serif', 'Liberation Serif', Georgia,
+    serif;
+
+  --font-heading: 'Noto Serif', var(--font-stack-serif);
+  --font-body: 'Bitter', var(--font-stack-serif);
+  --font-flourish: 'Gabriela', var(--font-stack-serif);
+  --font-mono: 'PT Mono', SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', monospace;
+  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}

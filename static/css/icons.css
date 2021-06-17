@@ -1,5 +1,5 @@
 i.icon svg {
-  fill: #e8e8e8;
+  fill: var(--icon-color-content);
   display: inline-block;
   font-size: inherit;
   height: 1em;
@@ -9,10 +9,12 @@ i.icon svg {
   margin: 0 4px 0 0;
 }
 
-.article-sidebar i.icon svg {
-  fill: var(--sidebar-icon-color);
+header i.icon svg {
+  fill: var(--icon-color-header);
 }
-
-.blog-header .nav li.active i.icon svg {
+footer i.icon svg {
+  fill: var(--icon-color-footer);
+}
+header .active i.icon svg {
   fill: var(--header-background);
 }

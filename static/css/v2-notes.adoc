@@ -1,0 +1,21 @@
+= v2 notes
+
+== Total CSS sizes
+
+=== Previously published, as of 2021-06-17 10:53:33: 
+
+* 17.9kb https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css
+* 4.7kb  https://duncanlock.net/theme/css/style.min.css
+* 721b   https://fonts.googleapis.com/css?family=Bitter:400,400italic|Droid+Serif:400&display=swap
+* 732b   https://fonts.googleapis.com/css?family=Gabriela&text=%26%C2%A7|PT+Mono&display=swap
+
+Total: 24.05300 kilobytes
+
+=== Version two:
+
+Currently:
+
+* 1.3kb  https://fonts.googleapis.com/css2?family=Bitter:ital@0;1&family=Noto+Serif&family=PT+Mono&display=swap
+* 19.4kb http://duncanlock.test/theme/css/style.min.css
+
+Total: 20.7 kilobytes
