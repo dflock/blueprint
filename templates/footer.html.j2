@@ -7,7 +7,7 @@
         <ul class="nav nav-list" id="site-links">
           {% for anchor_text, icon, link in SITE_LINKS %}
           <li>
-            <a href="{{ link }}"><i class="icon">{{icon}}</i>{{anchor_text}}</a>
+            <a href="{{ SITEURL }}{{ link }}"><i class="icon">{{icon}}</i>{{anchor_text}}</a>
           </li>
           {% endfor %} {% if FEED_RSS or FEED_ATOM %}
           <li class="feeds">
