@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {
+      "path": ".."
+    }
+  ],
+  "settings": {
+    "files.associations": {
+      "*.html": "jinja-html"
+    },
+    // Prettier
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[jinja-html]": {
+      "editor.defaultFormatter": null
+    }
+  }
+}
