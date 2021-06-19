@@ -90,8 +90,17 @@
     {% endif %}
 
     <!-- Le styles -->
-    {% assets filters="cssmin", output="css/style.min.css", "css/bs5/bootstrap-reboot.css", "css/variables.css", "css/utility-classes.css", "css/icons.css", "css/main.css",
-    "css/pygments-monokai.css" %}
+    {% assets filters="cssmin", output="css/style.min.css", 
+      "css/bs5/bootstrap-reboot.css", 
+      "css/variables.css", 
+      "css/utility-classes.css", 
+      "css/icons.css", 
+      "css/grid.css",
+      "css/header-footer.css",
+      "css/figures-images.css",
+      "css/main.css",
+      "css/pygments-monokai.css"
+    %}
     <link rel="stylesheet" media="all" href="{{ SITEURL }}/{{ ASSET_URL }}" />
     {% endassets %}
     <link
@@ -134,56 +143,17 @@
   </head>
 
   <body>
-    <header class="hidden-print">
-      <div class="container">
-        <div class="row-fluid">
-          <div class="span8">
-            <a href="{{ SITEURL }}" class="brand">{{SITENAME}}</a>
-          </div>
-          <div class="span4" id="blog-nav">
-            <ul class="nav nav-pills pull-right">
-            {% if DISPLAY_CATEGORIES_ON_MENU %}
-              {% for cat, null in categories %}
-              <li {% if cat == category %} class="active" {% endif %}>
-                <a href="{{ SITEURL }}/{{ cat.url }}">
-                  <i class="icon">{% if cat == category %}{{ICONS['category_active']}}{% else %}{{ICONS['category']}}{% endif %}</i>{{ cat }}
-                </a>
-              </li>
-              {% endfor %} 
-              {% endif %}
-              
-              {% if DISPLAY_PAGES_ON_MENU %} {% for page in PAGES
-              %}
-              <li>
-                <a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>
-              </li>
-              {% endfor %} {% endif %} {% if HEADER_LINKS %} {% for anchor_text,
-              icon, link in HEADER_LINKS %}
-              <li>
-                <a href="{{ link }}">
-                  <i class="icon">{{icon}}</i>{{anchor_text}}
-                </a>
-              </li>
-              {% endfor %} {% endif %}
-            </ul>
-          </div>
-        </div>
-        {# End of fluid row #}
-      </div>
-      {# End of Container #}
+    <header>
+      {% include "header.html.j2" %}
     </header>
 
-    <div class="container">
-      <div class="content">
-        <div class="row-fluid">
-          <div class="span11">{% block content %}{% endblock %}</div>
-        </div>
-        {# End row #}
-      </div>
-      {# End content #}
+    <div class="content">
+      {% block content %}{% endblock %}
     </div>
 
-    {% include "footer.html.j2" %}
+    <footer>
+      {% include "footer.html.j2" %}
+    </footer>
 
     {% include "analytics.html.j2" %}
   </body>

@@ -15,6 +15,11 @@ header i.icon svg {
 footer i.icon svg {
   fill: var(--icon-color-footer);
 }
+header a:hover i.icon svg,
 header .active i.icon svg {
   fill: var(--header-background);
+}
+footer a:hover i.icon svg,
+footer .active i.icon svg {
+  fill: var(--footer-background);
 }

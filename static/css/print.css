@@ -1,13 +1,39 @@
 * {
-	color: inherit !important;
+  color: inherit !important;
 }
 
 abbr,
 abbr[title],
 abbr[data-original-title] {
-	border: none;
+  border: none;
 }
 
-h1, h2, h3, h4 {
-	font-weight: bold;
+h1,
+h2,
+h3,
+h4 {
+  font-weight: bold;
+}
+
+@media print {
+  * {
+    color: inherit !important;
+  }
+
+  abbr,
+  abbr[title],
+  abbr[data-original-title] {
+    border: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: bold;
+  }
+
+  .hresume .intro {
+    font-size: 120%;
+  }
 }

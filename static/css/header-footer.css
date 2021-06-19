@@ -1,0 +1,136 @@
+/* Styling for Nav bar. Bg color, link color etc */
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+header,
+footer {
+  padding: 1.5rem 0.5rem;
+  background: var(--footer-background) url(/images/blueprint-background.png)
+    repeat;
+  color: var(--text-color-light);
+  margin-bottom: 1rem;
+}
+
+/* Header & Footer Common Nav */
+header nav,
+footer nav {
+  margin-right: 1rem;
+}
+
+header a,
+footer a {
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  border: 1px solid transparent;
+}
+header a:hover,
+footer a:hover {
+  color: var(--text-color-light);
+}
+
+header nav ul,
+footer nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 0;
+  margin-right: 0;
+}
+
+header nav li a,
+footer nav li a {
+  color: var(--text-color-light);
+  display: inline-block;
+  padding: 0.25rem;
+}
+header nav li i,
+footer nav li i {
+  color: var(--text-color-light);
+}
+header nav li a:hover,
+footer nav li a:hover {
+  color: var(--header-background);
+  background-color: var(--text-color-light);
+  border: 1px solid var(--text-color-light);
+}
+header nav li.active a,
+footer nav li.active a {
+  background-color: var(--text-color-light);
+  color: var(--header-background);
+}
+
+/* Header specific nav */
+header nav {
+  margin: 1.5rem 0.5rem 0.5rem 0;
+}
+header nav li {
+  float: left;
+  margin-left: 1rem;
+}
+
+/* Footer specific nav */
+footer li {
+  text-align: left;
+  line-height: 1;
+  margin-bottom: 0;
+}
+footer li.feeds a {
+  display: inline-block;
+  padding: 3px;
+  margin: 0 3px 0 -6px;
+}
+
+/* Site header main heading */
+.brand {
+  display: block;
+  margin-right: 2rem;
+  font-family: var(--font-heading);
+  font-weight: normal;
+  font-size: 5.063em;
+  line-height: 1;
+  color: var(--text-color-light);
+}
+
+/* Footer */
+footer {
+  padding: 1em 2em;
+  margin: 1em 0 0 0;
+}
+footer .footer-links-container {
+  display: flex;
+}
+footer nav {
+  flex-grow: 1;
+}
+footer a {
+  color: var(--text-color-light);
+  border-radius: 3px;
+  border: 1px solid transparent;
+}
+
+footer h4 {
+  font: bold 1rem/1.5 var(--font-sans);
+  text-transform: uppercase;
+  margin: 0 0 0.2rem 0;
+  color: var(--text-color-light);
+}
+
+footer hr {
+  margin: 0.25rem 0 1rem 0;
+  opacity: initial;
+}
+footer .amp {
+  color: var(--text-color-light);
+}
+
+.colophon {
+  width: 50%;
+}
+.colophon p {
+  margin: 0;
+  font-size: 90%;
+  font-style: italic;
+  line-height: 1.25;
+}

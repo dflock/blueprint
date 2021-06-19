@@ -1,0 +1,34 @@
+<div class="brand-container">
+  <a href="{{ SITEURL }}" class="brand">{{SITENAME}}</a>
+</div>
+<nav>
+  <ul>
+  {% if DISPLAY_CATEGORIES_ON_MENU %}
+    {% for cat, null in categories %}
+    <li {% if cat == category %} class="active" {% endif %}>
+      <a href="{{ SITEURL }}/{{ cat.url }}">
+        <i class="icon">{% if cat == category %}{{ICONS['category_active']}}{% else %}{{ICONS['category']}}{% endif %}</i>{{ cat }}
+      </a>
+    </li>
+    {% endfor %} 
+  {% endif %}
+    
+  {% if DISPLAY_PAGES_ON_MENU %}
+    {% for page in PAGES %}
+    <li>
+      <a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a>
+    </li>
+    {% endfor %}
+  {% endif %}
+
+  {% if HEADER_LINKS %}
+    {% for anchor_text, icon, link in HEADER_LINKS %}
+    <li>
+      <a href="{{ link }}">
+        <i class="icon">{{icon}}</i>{{anchor_text}}
+      </a>
+    </li>
+    {% endfor %}
+  {% endif %}
+  </ul>
+</nav>

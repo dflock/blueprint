@@ -19,23 +19,26 @@
 {% block content %}
     {% if articles %}
         {% for article in articles_page.object_list %}
-            <div class='row-fluid'>
-                <div class='article-title span10'>
+            <article>
+                <div class="title">
+                    <div class="content-title">
                     <a href="{{ SITEURL }}/{{ article.url }}"><h2>{{ article.title }}</h2></a>
+                    </div>
                 </div>
-            </div>
-            <div class="row-fluid">
-                <div class="span3 article-sidebar">
-                    {% include "article-sidebar.html.j2" %}
+
+                <div class="main">
+                    <div class="sidebar">
+                        {% include "article-sidebar.html.j2" %}
+                    </div>
+                    <div class="content">
+                        {{ article.summary }}
+                        <br />
+                        <a class="read-more" href="{{ SITEURL }}/{{ article.url }}">
+                        {% if ICONS['read-more'] %}<i class="icon">{{ICONS['read-more']}}</i> {% endif %}Read More </a>
+                        <hr />
+                    </div>
                 </div>
-                <div class="summary span9 content">
-                    {{ article.summary }}
-                    <br />
-                    <a class="read-more" href="{{ SITEURL }}/{{ article.url }}">
-                    {% if ICONS['read-more'] %}<i class="icon">{{ICONS['read-more']}}</i> {% endif %}Read More </a>
-                    <hr />
-                </div>
-            </div>
+            </article>
             {% if loop.last and (articles_page.has_previous() or not articles_page.has_previous() and loop.length > 1) %}
                 {% include 'pagination.html.j2' %}
             {% endif %}

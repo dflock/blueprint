@@ -1,5 +1,5 @@
-<div class="row-fluid">
-  <div class="span10">
+<div>
+  <div class="article-info">
     <p>
       <span title="{{ article.date.isoformat() }}"
         >{{ article.date|sidebar_date_format }}</span
@@ -49,7 +49,7 @@
     </p>
   </div>
 
-  <div class="span10">
+  <section>
     <h4 class="tag_heading">Tags:</h4>
     <ul class="tag-list">
       {% for tag in article.tags|sort %}
@@ -59,7 +59,7 @@
       </li>
       {% endfor %}
     </ul>
-  </div>
+  </section>
 
   {% if TWITTER_USERNAME and ARTICLE_TWEET_BUTTON %}
   <div class="span10 social_widgets">

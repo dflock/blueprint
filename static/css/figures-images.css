@@ -1,0 +1,81 @@
+/* Styles for Figures & Images */
+
+.content img {
+  border: 1px solid var(--img-border-color);
+  border-radius: var(--border-radius);
+  padding: 0.5rem;
+  background: var(--content-background);
+  float: left;
+  margin: 1em 1em 1em 0;
+  box-shadow: 4px 4px 4px 0 rgba(128, 128, 128, 0.5);
+}
+.content img.align-left {
+  float: left;
+  margin: 0.5em 1em 1em 0;
+}
+.content img.align-right {
+  float: right;
+  margin: 0.5em 0 1em 1em;
+}
+.content img.no-wrap {
+  float: none;
+  clear: both;
+  margin-bottom: 0.15em;
+}
+
+.content img.bare {
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+/* New style html5 figures */
+.content figure {
+  display: table;
+  max-width: 100%;
+  float: left;
+
+  border: 1px solid var(--img-border-color);
+  border-bottom: none;
+  border-radius: 4px;
+  background: var(--content-background);
+  margin: 0 1em 1em 0;
+  padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+  box-shadow: 4px 4px 4px 0 rgba(128, 128, 128, 0.5);
+}
+.content figure.align-right {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+.content figure.align-left {
+  float: left;
+}
+.content figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+.content figcaption {
+  padding: 0.25rem 0.5rem 0.5rem 0.5rem;
+
+  display: table-caption;
+  caption-side: bottom;
+
+  border: 1px solid var(--img-border-color);
+  border-top: none;
+  background-color: var(--content-background);
+  box-shadow: 4px 4px 4px 0 rgba(128, 128, 128, 0.5);
+  border-radius: 4px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  margin-top: -2px;
+  font-size: 80%;
+}
+.content figcaption .amp {
+  color: #bbb;
+}
