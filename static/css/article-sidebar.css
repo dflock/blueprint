@@ -1,0 +1,77 @@
+/* Article Sidebar */
+article .sidebar {
+  text-align: left;
+  color: var(--text-color-muted);
+  font-size: 90%;
+  padding: 0 1rem 1rem 1rem;
+}
+article .sidebar .article-info {
+  margin-left: 0;
+}
+article .sidebar p {
+  text-align: left;
+  margin: 0 0 0.5em 0;
+  font-size: 1em;
+}
+article .sidebar .by {
+  font-style: italic;
+  color: var(--text-color-muted);
+}
+article .sidebar p.social_widgets {
+  margin-bottom: 0;
+}
+article .sidebar p + ul {
+  margin-bottom: 0;
+}
+article .sidebar .tag-list {
+  margin: 0;
+  padding: 0;
+}
+article .sidebar .tag-list .tag {
+  padding: 0;
+  float: none;
+  clear: both;
+}
+
+article .sidebar .contents ul {
+  margin: 0;
+  list-style-type: none;
+}
+article .sidebar .contents ul li {
+  line-height: 1.1;
+  margin-bottom: 0.25em;
+}
+article .sidebar .contents ul li a {
+  color: #aaa;
+}
+article .sidebar .contents ul ul {
+  margin: 0 0 0.5em 0.7em;
+}
+
+article .sidebar nav.toc ul {
+  margin-top: 0;
+}
+
+article .sidebar nav {
+  margin-top: 0.5em;
+}
+article .sidebar nav .amp {
+  color: var(--text-color-amp);
+}
+
+article .sidebar h4 {
+  color: var(--text-color-muted);
+}
+
+/* Landscape phones and down */
+@media screen and (max-width: 480px) {
+  article .sidebar p.tag_heading,
+  article .sidebar ul {
+    display: inline;
+  }
+  article .sidebar .tag-list .tag {
+    float: none;
+    display: inline-block;
+    list-style-type: none;
+  }
+}
