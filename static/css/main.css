@@ -57,6 +57,10 @@ h1 {
   padding: 0 1rem;
 }
 
+/* 
+================== Here be Dragons ===================
+*/
+
 /* Article Sidebar */
 article .sidebar {
   text-align: left;
@@ -115,7 +119,7 @@ article .sidebar nav {
   margin-top: 0.5em;
 }
 article .sidebar nav .amp {
-  color: #bbb;
+  color: var(--text-color-amp);
 }
 
 .content article .sidebar h4 {

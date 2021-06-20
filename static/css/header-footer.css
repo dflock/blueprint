@@ -27,7 +27,9 @@ footer a {
   border: 1px solid transparent;
 }
 header a:hover,
-footer a:hover {
+footer a:hover,
+header .amp,
+footer .amp {
   color: var(--text-color-light);
 }
 
@@ -55,10 +57,18 @@ footer nav li a:hover {
   background-color: var(--text-color-light);
   border: 1px solid var(--text-color-light);
 }
+header nav li a:hover .amp,
+footer nav li a:hover .amp {
+  color: inherit;
+}
 header nav li.active a,
 footer nav li.active a {
   background-color: var(--text-color-light);
   color: var(--header-background);
+}
+header nav li.active .amp,
+footer nav li.active .amp {
+  color: inherit;
 }
 
 /* Header specific nav */
@@ -120,9 +130,6 @@ footer h4 {
 footer hr {
   margin: 0.25rem 0 1rem 0;
   opacity: initial;
-}
-footer .amp {
-  color: var(--text-color-light);
 }
 
 .colophon {
