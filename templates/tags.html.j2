@@ -2,34 +2,50 @@
 endblock %} {% block description %}Everything on {{ SITENAME }}, organised by
 Tag.{% endblock %} {% block content %}
 
-<h1>Tags</h1>
+<article>
 
-<h2>By Name</h2>
+    <div class="title">
+        <div class="content-title">
+            <h1>Tags</h1>
+        </div>
+    </div>
 
-<ul class="tag-list">
-  {% for tag, articles in tags %}
-  <li class="tag">
-    <i class="icon-tags"></i
-    ><a href="{{ SITEURL }}/{{ tag.url }}"
-      >{{ tag }} <span>[{{ articles|count }}]</span></a
-    >
-  </li>
-  {% endfor %}
-</ul>
+    <div class="main tags">
 
-<hr />
+      <section class="content" itemprop="text articleBody">
 
-<h2>By Frequency</h2>
+        <p class="smallprint">There are currently {{ tags | count }} tags.</p>
 
-<ul class="tag-list">
-  {% for tag, articles in tags|tagsort %}
-  <li class="tag">
-    <i class="icon-tags"></i
-    ><a href="{{ SITEURL }}/{{ tag.url }}"
-      >{{ tag }} <span>[{{ articles|count }}]</span></a
-    >
-  </li>
-  {% endfor %}
-</ul>
+        <h2>By Name</h2>
+
+        <ul class="tag-list">
+          {% for tag, articles in tags | tagsort_name %}
+          <li class="tag">
+            <i class="icon-tags"></i
+            ><a href="{{ SITEURL }}/{{ tag.url }}"
+              >{{ tag }} <span>[{{ articles|count }}]</span></a
+            >
+          </li>
+          {% endfor %}
+        </ul>
+
+        <hr />
+
+        <h2>By Frequency</h2>
+
+        <ul class="tag-list">
+          {% for tag, articles in tags | tagsort_count %}
+          <li class="tag">
+            <i class="icon-tags"></i
+            ><a href="{{ SITEURL }}/{{ tag.url }}"
+              >{{ tag }} <span>[{{ articles|count }}]</span></a
+            >
+          </li>
+          {% endfor %}
+        </ul>
+
+      </section>
+    </div>
+  </article>
 
 {% endblock %}

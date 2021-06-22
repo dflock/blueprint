@@ -14,23 +14,6 @@ body {
   font-family: var(--font-body);
   background-color: var(--content-background);
 }
-p {
-  font-size: 1.15rem;
-
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
-}
-a {
-  color: var(--link-color);
-}
-
-dl {
-  font-size: 1.15rem;
-}
-dt {
-  font-size: 1.1rem;
-}
 
 h1,
 h2,
@@ -41,10 +24,33 @@ h6 {
   font-family: var(--font-heading);
   font-weight: normal;
   color: var(--text-color-dark);
-  line-height: 1;
 }
 h1 {
   font-size: 3.375em;
+}
+
+p {
+  font-size: 1.15rem;
+
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+li p {
+  margin-bottom: 0;
+}
+a {
+  color: var(--link-color);
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+dl {
+  font-size: 1.15rem;
+}
+dt {
+  font-size: 1.1rem;
 }
 
 /* Styling for articles */
@@ -77,8 +83,11 @@ section.content {
   font-size: 0.9rem;
   font-style: italic;
 
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
   line-height: 1.25;
+}
+.content blockquote p:last-of-type {
+  margin-bottom: 0;
 }
 .content footer {
   background: initial;
@@ -94,7 +103,11 @@ section.content {
   margin-top: 0;
 }
 
-/* Article footnotes */
+/* 
+
+  Article footnotes 
+
+*/
 
 .content .footnotes hr {
   display: none;
@@ -106,7 +119,6 @@ section.content {
 .content .footnote-reference {
   font-size: 75%;
   vertical-align: top;
-  margin-left: -0.2em;
 }
 .content .footnote td {
   border: none;
@@ -133,71 +145,36 @@ section.content {
   border-collapse: collapse;
   border: none;
   width: 100%;
+  margin-bottom: 1rem;
 }
 .content th {
   border: none;
   border-bottom: 2px solid #ccc;
   border-right: 2px solid #fff;
   text-align: left;
-  /*text-transform: capitalize;*/
-  /*font-variant: small-caps;*/
 }
 .content td {
   border: none;
+  vertical-align: top;
+  padding: 0.25rem;
   border-bottom: 1px dotted #ccc;
   border-right: 1px solid #fff;
 }
 
 /* 
 
-    Styles for Admonitions, bith .rst & .adoc html5s ones.
+    Styles for Admonitions
+    https://docs.asciidoctor.org/asciidoc/latest/blocks/admonitions/
 
 */
 
-/* Styles for RST Admonitions: http://docutils.sourceforge.net/docs/ref/rst/directives.html#admonitions */
-.content div.note,
-.content div.caution {
+.content .admonition-block {
   padding: 0.25em 1em;
   background: var(--admonition-background) url(/images/blueprint-background.png);
   color: var(--text-color-light);
   border: 1px solid #3c7cbd;
   border-radius: 4px;
-}
-.content .admonition-title {
-  font-size: 150%;
-  font-weight: bold;
-  margin: 0.5em 0 0 0;
-}
-.content div.note .amp,
-.content div.caution .amp {
-  color: var(--text-color-light);
-}
-
-.content div.note a,
-.content div.caution a {
-  color: var(--text-color-light);
-  text-decoration: underline;
-}
-
-.content div.note tt,
-.content div.caution tt {
-  background-color: transparent;
-  background-color: rgba(222, 222, 222, 0.25);
-}
-
-.content div.note p,
-.content div.caution p {
-  margin-top: 0.1em;
-}
-
-/* Styles for ADOC Admonitions: https://docs.asciidoctor.org/asciidoc/latest/blocks/admonitions/ */
-.content aside.note,
-.content section.caution {
-  padding: 0.25em 1em;
-  background: var(--admonition-background) url(/images/blueprint-background.png);
-  color: var(--text-color-light);
-  border: 1px solid #3c7cbd;
-  border-radius: 4px;
+  margin-bottom: 1rem;
 }
 .content .admonition-block h6 {
   color: var(--text-color-light);
@@ -233,9 +210,18 @@ section.content {
 }
 
 /* Styles for Code & literals */
-.summary div.highlight {
-  /*display: inline-block;*/
+
+/* Inline code snippets */
+.content p > code,
+.content td > code,
+.content li > code {
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  white-space: nowrap;
+  padding: 0.1rem 0.2rem;
 }
+
+/* Code blocks */
 .highlight {
   border-radius: 5px;
 }
@@ -244,7 +230,7 @@ section.content {
   font-size: initial;
 }
 .content pre.highlight {
-  white-space: normal;
+  white-space: pre-wrap;
   word-break: break-word;
   overflow-wrap: break-word;
 
@@ -252,11 +238,9 @@ section.content {
   font-size: 1rem;
   background-color: #090916;
   color: #f8f8f2;
-  padding: 0.5rem;
+  padding: 0.75rem;
 
   overflow: auto;
-  white-space: pre;
-  word-wrap: normal;
   border: none;
 }
 
@@ -297,21 +281,6 @@ section.content {
   background: white;
 }
 
-/* Read more button */
-.btn-info.xsmall {
-  padding: 1px 3px 1px;
-  font-size: 11px;
-  float: right;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-}
-
-/* Article index summary */
-.summary {
-  margin-top: 0.8em;
-}
-
 /* Styles for Tags */
 .tag-list {
   margin: 1em 0 0.5em 0;
@@ -329,20 +298,6 @@ section.content {
 }
 .tag .muted {
   color: var(--text-color-muted);
-}
-
-/* Styles for the Archives */
-.archive-year {
-  text-align: right;
-}
-table.archive td {
-  text-align: left;
-}
-table.archive td h4 {
-  margin: 0;
-}
-table.archive td p {
-  margin: 0.2em 0;
 }
 
 /*
@@ -452,16 +407,16 @@ table.enumbers {
 -------------------------------*/
 
 /* Large desktop */
-@media screen and (min-width: 1200px) {
-}
+/* @media screen and (min-width: 1200px) {
+} */
 
 /* Portrait tablet to landscape and desktop */
-@media screen and (min-width: 768px) and (max-width: 979px) {
-}
+/* @media screen and (min-width: 768px) and (max-width: 979px) {
+} */
 
 /* Landscape phone to portrait tablet */
 @media screen and (max-width: 767px) {
-  #socialist {
+  /* #socialist {
     display: table-footer-group;
   }
   #colophon {
@@ -469,22 +424,22 @@ table.enumbers {
   }
   #sitelinks {
     display: table-footer-group;
-  }
+  } */
 
-  .article-content {
+  /* .article-content {
     clear: both;
-  }
+  } */
   .brand {
     font-size: 250%;
     padding-left: 0.5em;
   }
-  header {
+  /* header {
     padding: 0;
   }
   #blog-nav {
     padding: 0;
     margin-top: 0;
-  }
+  } */
 }
 
 /* Landscape phones and down */

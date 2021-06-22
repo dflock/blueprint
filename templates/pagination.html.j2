@@ -1,21 +1,47 @@
-<div class="pagination">
-<ul>
+<nav aria-label="...">
+  <ul class="pagination">
+
 {% if articles_page.has_previous() %}
 {% set num = articles_page.previous_page_number() %}
-    <li class="prev"><a href="{{ SITEURL }}/{{ page_name }}{{ num if num > 1 else '' }}.html">&larr; Previous</a></li>
+    <li class="page-item">
+      <a class="page-link" href="{{ SITEURL }}/{{ page_name }}{{ num if num > 1 else '' }}.html" aria-label="Previous">
+        <span aria-hidden="true">{% if ICONS['previous'] %}{{ ICONS['previous'] }}{% else %} &larr; {% endif %}</span> Previous
+      </a>
+    </li>
 {% else %}
-    <li class="prev disabled"><a href="#">&larr; Previous</a></li>
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+      <span aria-hidden="true">{% if ICONS['previous'] %}{{ ICONS['previous'] }}{% else %} &larr; {% endif %}</span> Previous
+      </a>
+    </li>
 {% endif %}
 
 {% for num in range( 1, 1 + articles_paginator.num_pages ) %}
-    <li class="{{ 'active' if num == articles_page.number else '' }}"><a href="{{ SITEURL }}/{{ page_name }}{{ num if num > 1 else '' }}.html">{{ num }}</a></li>
+{% if num == articles_page.number %}
+    <li class="page-item active" aria-current="page">
+      <span class="page-link">{{ num }}</span>
+    </li>
+{% else %}
+    <li class="page-item">
+      <a class="page-link" href="{{ SITEURL }}/{{ page_name }}{{ num if num > 1 else '' }}.html">{{ num }}</a>
+    </li>
+{% endif %}
 {% endfor %}
 
 {% if articles_page.has_next() %}
-    <li class="next"><a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.next_page_number() }}.html">Next &rarr;</a></li>
+{% set num = articles_page.next_page_number() %}
+    <li class="page-item">
+      <a class="page-link" href="{{ SITEURL }}/{{ page_name }}{{ articles_page.next_page_number() }}.html" aria-label="next">
+        Next <span aria-hidden="true">{% if ICONS['next'] %}{{ ICONS['next'] }}{% else %} &rarr; {% endif %}</span>
+      </a>
+    </li>
 {% else %}
-    <li class="next disabled"><a href="#">&rarr; Next</a></li>
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+        Next <span aria-hidden="true">{% if ICONS['next'] %}{{ ICONS['next'] }}{% else %} &rarr; {% endif %}</span>
+      </a>
+    </li>
 {% endif %}
 
-</ul>
-</div>
+  </ul>
+</nav>

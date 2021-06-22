@@ -1,5 +1,5 @@
 i.icon svg {
-  fill: var(--icon-color-content);
+  fill: currentColor;
   display: inline-block;
   font-size: inherit;
   height: 1em;
@@ -11,6 +11,10 @@ i.icon svg {
 
 header i.icon svg {
   fill: var(--icon-color-header);
+}
+.sidebar i.icon svg {
+  fill: var(--icon-color-content);
+}
 }
 footer i.icon svg {
   fill: var(--icon-color-footer);

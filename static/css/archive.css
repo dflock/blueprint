@@ -1,0 +1,24 @@
+/* Styles for the Archives */
+.archive-year {
+  text-align: right;
+}
+
+table.archive {
+  margin-bottom: 1rem;
+}
+
+table.archive tr:last-of-type td {
+  border-bottom: none;
+}
+
+table.archive td {
+  text-align: left;
+  padding-top: 0.5rem;
+}
+table.archive .smallprint {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.95rem;
+}
+table.archive h4 {
+  margin-bottom: 1rem;
+}

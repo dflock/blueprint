@@ -24,7 +24,7 @@
 
   {% if HEADER_LINKS %}
     {% for anchor_text, icon, link in HEADER_LINKS %}
-    <li>
+    <li {% if link.endswith(output_file) %} class="active" {% endif %}>
       <a href="{{ link }}">
         <i class="icon">{{icon}}</i>{{anchor_text}}
       </a>

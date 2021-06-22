@@ -46,6 +46,7 @@ footer nav li a {
   color: var(--text-color-light);
   display: inline-block;
   padding: 0.25rem;
+  width: 100%;
 }
 header nav li i,
 footer nav li i {
@@ -101,6 +102,9 @@ footer li.feeds a {
   font-size: 5.063em;
   line-height: 1;
   color: var(--text-color-light);
+}
+a.brand:hover {
+  text-decoration: underline;
 }
 
 /* Footer */

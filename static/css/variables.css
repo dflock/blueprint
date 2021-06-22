@@ -8,7 +8,8 @@
   --text-color-light: #e8e8e8;
   --text-color-amp: #bbb;
 
-  --link-color: #0a5693;
+  /* --link-color: #0a5693; */
+  --link-color: var(--blueprint-blue);
 
   --content-background: #fff;
   --header-background: var(--blueprint-blue);
@@ -19,6 +20,9 @@
   --icon-color-content: #bbb;
   --icon-color-header: #e8e8e8;
   --icon-color-footer: #e8e8e8;
+
+  --pagination-hover-background: #e9ecef;
+  --pagination-border-color: #dee2e6;
 
   --font-stack-serif: Constantia, 'Lucida Bright', Lucidabright, 'Lucida Serif',
     Lucida, 'DejaVu Serif', 'Bitstream Vera Serif', 'Liberation Serif', Georgia,
