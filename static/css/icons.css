@@ -12,9 +12,8 @@ i.icon svg {
 header i.icon svg {
   fill: var(--icon-color-header);
 }
-.sidebar i.icon svg {
+article i.icon svg {
   fill: var(--icon-color-content);
-}
 }
 footer i.icon svg {
   fill: var(--icon-color-footer);

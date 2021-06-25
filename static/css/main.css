@@ -26,7 +26,7 @@ h6 {
   color: var(--text-color-dark);
 }
 h1 {
-  font-size: 3.375em;
+  font-size: 3.375rem;
 }
 
 p {
@@ -53,15 +53,15 @@ dt {
   font-size: 1.1rem;
 }
 
-/* Styling for articles */
+/*********************************
+
+  Articles
+
+**********************************/
 
 .content-title {
   padding: 0 1rem;
 }
-
-/* 
-================== Here be Dragons ===================
-*/
 
 article .main {
   padding-top: 1rem;
@@ -133,14 +133,15 @@ section.content {
   font-weight: normal;
 }
 
+/* Definition lists */
 .content dd {
-  margin: 0.2em 0 0.3em 1.5em;
+  margin: 0.2rem 0 0.3rem 1.5rem;
 }
 .content dd ul {
-  margin: 0.2em 0 0.3em 1em;
+  margin: 0.2rem 0 0.3rem 1rem;
 }
 
-/* Styles for tables */
+/* Tables */
 .content table {
   border-collapse: collapse;
   border: none;
@@ -163,24 +164,24 @@ section.content {
 
 /* 
 
-    Styles for Admonitions
-    https://docs.asciidoctor.org/asciidoc/latest/blocks/admonitions/
+  Admonitions
+  https://docs.asciidoctor.org/asciidoc/latest/blocks/admonitions/
 
 */
 
 .content .admonition-block {
-  padding: 0.25em 1em;
+  padding: 0.25rem 1rem;
   background: var(--admonition-background) url(/images/blueprint-background.png);
   color: var(--text-color-light);
-  border: 1px solid #3c7cbd;
-  border-radius: 4px;
+  border: 1px solid var(--admonition-border-color);
+  border-radius: var(--border-radius);
   margin-bottom: 1rem;
 }
 .content .admonition-block h6 {
   color: var(--text-color-light);
   font-size: 150%;
   font-weight: bold;
-  margin: 0.5em 0 0.5rem 0;
+  margin: 0.5rem 0 0.5rem 0;
 }
 .content aside.note .amp,
 .content section.caution .amp {
@@ -201,7 +202,7 @@ section.content {
 
 .content aside.note p,
 .content section.caution p {
-  margin-top: 0.1em;
+  margin-top: 0.1rem;
 }
 
 /* Any image that directly follows a paragraph inside a .content element */
@@ -209,7 +210,11 @@ section.content {
   margin-top: 0;
 }
 
-/* Styles for Code & literals */
+/* 
+
+  Code & literals
+
+*/
 
 /* Inline code snippets */
 .content p > code,
@@ -277,14 +282,14 @@ section.content {
   color: #aaa;
   font-family: var(--font-flourish);
   content: '§';
-  padding: 0 0.5em;
+  padding: 0 0.5rem;
   background: white;
 }
 
 /* Styles for Tags */
 .tag-list {
-  margin: 1em 0 0.5em 0;
-  padding: 0 0 0.5em 0;
+  margin: 1rem 0 0.5rem 0;
+  padding: 0 0 0.5rem 0;
   clear: both;
   float: none;
   overflow: auto;
@@ -294,7 +299,7 @@ section.content {
   list-style-type: none;
 }
 .tag {
-  padding: 0.3em 0.5em;
+  padding: 0.3rem 0.5rem;
 }
 .tag .muted {
   color: var(--text-color-muted);
@@ -330,7 +335,7 @@ Styles for my CV
 .hresume .boxout {
   border: 1px solid var(--img-border-color);
   border-radius: 4px;
-  padding: 1em;
+  padding: 1rem;
   background-color: #efefef;
 }
 .hresume .boxout address,
@@ -353,16 +358,15 @@ Styles for my CV
 
 .hresume .download {
   float: right;
-  margin-top: -1em;
+  margin-top: -1rem;
   font-variant: small-caps;
   color: var(--text-color-muted);
 }
 
 /*
 
-Styles for the E-Numbers stuff
-
-TODO: Split into separate stylesheet that only loads on that page
+  Styles for the E-Numbers stuff
+  TODO: Split into separate stylesheet that only loads on that page
 
 */
 
@@ -370,9 +374,9 @@ nav.enumbers ul {
   padding-left: 0;
 }
 nav.enumbers li {
-  margin-right: 1em;
+  margin-right: 1rem;
   float: left;
-  padding-right: 1em;
+  padding-right: 1rem;
 }
 
 table.enumbers {
@@ -398,60 +402,4 @@ table.enumbers {
   font-size: smaller;
   font-style: italic;
   color: #666;
-}
-
-/*-----------------------------
-
-    Responsive stuff
-
--------------------------------*/
-
-/* Large desktop */
-/* @media screen and (min-width: 1200px) {
-} */
-
-/* Portrait tablet to landscape and desktop */
-/* @media screen and (min-width: 768px) and (max-width: 979px) {
-} */
-
-/* Landscape phone to portrait tablet */
-@media screen and (max-width: 767px) {
-  /* #socialist {
-    display: table-footer-group;
-  }
-  #colophon {
-    display: table-header-group;
-  }
-  #sitelinks {
-    display: table-footer-group;
-  } */
-
-  /* .article-content {
-    clear: both;
-  } */
-  .brand {
-    font-size: 250%;
-    padding-left: 0.5em;
-  }
-  /* header {
-    padding: 0;
-  }
-  #blog-nav {
-    padding: 0;
-    margin-top: 0;
-  } */
-}
-
-/* Landscape phones and down */
-@media screen and (max-width: 480px) {
-  .brand {
-    font-size: 200%;
-  }
-  h1 {
-    font-size: 200%;
-  }
-
-  .hresume .boxout {
-    width: 90%;
-  }
 }

@@ -1,9 +1,10 @@
 /* Styling for Nav bar. Bg color, link color etc */
 
-header {
-  display: flex;
-  justify-content: center;
-}
+/********************************
+
+  Common Header & Footer
+
+********************************/
 
 header,
 footer {
@@ -72,6 +73,17 @@ footer nav li.active .amp {
   color: inherit;
 }
 
+/********************************
+
+  Header
+
+********************************/
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
 /* Header specific nav */
 header nav {
   margin: 1.5rem 0.5rem 0.5rem 0;
@@ -80,6 +92,26 @@ header nav li {
   float: left;
   margin-left: 1rem;
 }
+
+/* Site header main heading */
+.brand {
+  display: block;
+  margin-right: 2rem;
+  font-family: var(--font-heading);
+  font-weight: normal;
+  font-size: 5.063rem;
+  line-height: 1;
+  color: var(--text-color-light);
+}
+a.brand:hover {
+  text-decoration: underline;
+}
+
+/********************************
+
+  Footer
+
+********************************/
 
 /* Footer specific nav */
 footer li {
@@ -93,21 +125,6 @@ footer li.feeds a {
   margin: 0 3px 0 -6px;
 }
 
-/* Site header main heading */
-.brand {
-  display: block;
-  margin-right: 2rem;
-  font-family: var(--font-heading);
-  font-weight: normal;
-  font-size: 5.063em;
-  line-height: 1;
-  color: var(--text-color-light);
-}
-a.brand:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
 footer {
   padding: 1em 2em;
   margin: 1em 0 0 0;

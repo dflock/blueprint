@@ -66,13 +66,13 @@
 
     <div class="main">
 
-        <div class="sidebar">
+        <div class="article-sidebar">
             {% include "article-sidebar.html.j2" %}
             {% include "article-sidebar-multipart.html.j2" %}
             {% include "article-sidebar-toc.html.j2" %}
         </div>
 
-        <section class="content" itemprop="text articleBody">
+        <section class="article-content" itemprop="text articleBody">
 
             {{ article.content }}
 

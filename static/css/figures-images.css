@@ -8,6 +8,8 @@
   float: left;
   margin: 1em 1em 1em 0;
   box-shadow: 4px 4px 4px 0 rgba(128, 128, 128, 0.5);
+  max-width: 100%;
+  height: auto;
 }
 .content img.align-left {
   float: left;
