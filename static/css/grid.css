@@ -8,7 +8,7 @@ body {
     'header'
     'article'
     'footer';
-  min-height: 100vh;
+  height: 100vh;
 }
 
 header {
