@@ -65,11 +65,12 @@ dt {
 
 article .main {
   padding-top: 1rem;
+  max-width: 100vw;
 }
 
 section#preamble,
 section.content {
-  padding-right: 1rem;
+  padding: 0 1rem;
 }
 
 /* Article Blockquotes */

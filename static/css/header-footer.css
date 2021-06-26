@@ -48,6 +48,7 @@ footer nav li a {
   display: inline-block;
   padding: 0.25rem;
   width: 100%;
+  word-break: break-all;
 }
 header nav li i,
 footer nav li i {
@@ -129,12 +130,24 @@ footer {
   padding: 1em 2em;
   margin: 1em 0 0 0;
 }
-footer .footer-links-container {
+footer .row {
+  display: flex;
+}
+
+footer .links {
+  flex: 1;
   display: flex;
 }
 footer nav {
-  flex-grow: 1;
+  flex: 1;
 }
+footer .colophon {
+  flex: 1;
+}
+/* footer .copyright {
+  
+} */
+
 footer a {
   color: var(--text-color-light);
   border-radius: 3px;
@@ -149,14 +162,11 @@ footer h4 {
 }
 
 footer hr {
-  margin: 0.25rem 0 1rem 0;
   opacity: initial;
 }
 
-.colophon {
-  width: 50%;
-}
-.colophon p {
+.colophon p,
+.copyright p {
   margin: 0;
   font-size: 90%;
   font-style: italic;

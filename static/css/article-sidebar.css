@@ -72,8 +72,9 @@ article .article-sidebar nav .amp {
   color: var(--text-color-amp);
 }
 
-article .article-sidebar h4 {
+article .article-sidebar h3 {
   color: var(--text-color-muted);
+  font-size: 1.1rem;
 }
 
 /* Landscape phones and down */

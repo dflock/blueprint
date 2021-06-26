@@ -26,3 +26,10 @@ Total: 20.7 kilobytes
 * 21.0kb http://duncanlock.test/theme/css/style.min.css?8b3b4b76
 
 Total: 21.81900 kilobytes
+
+=== 2021-06-25 22:40:10
+
+* 812b   https://fonts.googleapis.com/css2?family=Bitter:ital@0;1&family=Noto+Serif&family=PT+Mono&display=swap
+* 21.7kb http://duncanlock.test/theme/css/style.min.css?8b3b4b76
+
+Total: 22.51200 kilobytes
