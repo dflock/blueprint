@@ -19,6 +19,9 @@
     flex-direction: column;
   }
 
+  .hresume .intro {
+    flex-direction: column;
+  }
   .hresume .boxout {
     width: 90%;
   }
@@ -55,5 +58,12 @@
   }
   footer .row {
     flex-direction: row;
+  }
+
+  .hresume .intro {
+    flex-direction: row;
+  }
+  .hresume .skills {
+    column-count: 2;
   }
 }

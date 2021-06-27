@@ -24,9 +24,16 @@
 {% endblock %}
 {% endif %}
 {% block content %}
-<section class="body span11 content">
-    <h1 class="content-title">{{ page.title }}</h1>
+<section class="body content">
+
+    <div class="title">
+        <div class="content-title">
+            <h1>{{ page.title }}</h1>
+        </div>
+    </div>
+
     {% if PDF_PROCESSOR %}<a href="{{ SITEURL }}/pdf/{{ page.slug }}.pdf">Get the pdf</a>{% endif %}
+    
     {{ page.content }}
 </section>
 {% endblock %}

@@ -26,10 +26,10 @@
   line-height: 1.25;
 }
 
-/* Styling for multiple column lists */
-.two-columns ul {
+/* Styling for multiple column things */
+.two-columns > ul {
   column-count: 2;
 }
-.three-columns ul {
+.three-columns > ul {
   column-count: 3;
 }
