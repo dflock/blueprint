@@ -53,9 +53,6 @@
   article .article-sidebar {
     flex-direction: column;
   }
-  article .article-sidebar .article-info {
-    display: contents;
-  }
   footer .row {
     flex-direction: row;
   }

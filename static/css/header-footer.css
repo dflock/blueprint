@@ -46,7 +46,7 @@ header nav li a,
 footer nav li a {
   color: var(--text-color-light);
   display: inline-block;
-  padding: 0.25rem;
+  padding: 0.25rem 0.5rem;
   width: 100%;
   word-break: break-all;
 }
@@ -147,9 +147,6 @@ footer nav {
 footer .colophon {
   flex: 1;
 }
-/* footer .copyright {
-  
-} */
 
 footer a {
   color: var(--text-color-light);

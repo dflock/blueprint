@@ -3,18 +3,21 @@ article .article-sidebar {
   text-align: left;
   color: var(--text-color-muted);
   font-size: 90%;
-  padding: 0 1rem 1rem 1rem;
+  padding: 0 1rem 0 1rem;
 
   display: flex;
-  flex-wrap: nowrap;
   flex-direction: column;
-  align-items: flex-start;
+  height: -moz-available;
+  height: fit-content;
 }
 
 article .article-sidebar .article-info {
   flex: 1;
 }
 article .article-sidebar section {
+  flex: 1;
+}
+article .article-sidebar .series {
   flex: 1;
 }
 
