@@ -1,19 +1,20 @@
-<div class="title">
-    <div class="content-title">
-        <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
+<article class="index">
+    <div class="title">
+        <div class="content-title">
+            <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
+        </div>
     </div>
-</div>
 
-<div class="main">
-    <div class="article-sidebar">
-        {% include "article-sidebar.html.j2" %}
-    </div>
-    <div class="article-content">
-        {{ article.summary }}
+    <div class="main">
+        <div class="article-sidebar">
+            {% include "article-sidebar.html.j2" %}
+        </div>
+        <div class="article-content">
+            {{ article.summary }}
 
-        <a class="read-more" href="{{ SITEURL }}/{{ article.url }}">
-        Read More {% if ICONS['read-more'] %}<i class="icon">{{ICONS['read-more']}}</i>{% endif %}</a>
-        <hr />
+            <a class="read-more" href="{{ SITEURL }}/{{ article.url }}">
+            Read More {% if ICONS['read-more'] %}<i class="icon">{{ICONS['read-more']}}</i>{% endif %}</a>
+            <hr />
+        </div>
     </div>
-</div>
-                
+</article>

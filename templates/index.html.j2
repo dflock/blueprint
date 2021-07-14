@@ -19,9 +19,8 @@
 {% block content %}
     {% if articles %}
         {% for article in articles_page.object_list %}
-            <article class="index">
-                {% include 'index_item_default.html.j2' %}
-            </article>
+            
+            {% include article | index_template(INDEX_TEMPLATE_FOR_TAG) %}
 
             {% if loop.last and (articles_page.has_previous() or not articles_page.has_previous() and loop.length > 1) %}
                 {% include 'pagination.html.j2' %}

@@ -19,3 +19,33 @@
   text-decoration: underline;
   color: var(--text-color-dark);
 }
+
+.index.minimal .tag-list-container {
+  margin-top: -0.25rem;
+}
+
+.index.minimal h2 {
+  font-size: 1.75rem;
+  margin: 0.25rem 0;
+}
+.index.minimal .icon {
+  vertical-align: top;
+  display: inline-block;
+}
+.index.minimal .tag-list {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.index.minimal .tag {
+  padding-top: 0;
+}
+
+.index.minimal .smallprint::before {
+  content: 'Today I Learned: ';
+  margin-right: 0.25rem;
+  color: var(--text-color-dark);
+}
+.index.minimal .smallprint::after {
+  content: '…';
+}
