@@ -26,6 +26,14 @@
   line-height: 1.25;
 }
 
+/* Don't clear headings in this section */
+.content .noclear h2,
+.content .noclear h3,
+.content .noclear h4,
+.content .noclear h5 {
+  clear: unset;
+}
+
 /* Styling for multiple column things */
 .two-columns > ul {
   column-count: 2;
