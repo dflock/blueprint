@@ -55,6 +55,14 @@
 {% endblock %}
 {% endif %}
 
+{% block extrahead %}
+{% if article.extra_css %}
+<style>
+    {{ article.extra_css }}
+</style>
+{% endif %}
+{% endblock %}
+
 {% block content %}
 <article>
 

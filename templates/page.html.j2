@@ -23,6 +23,15 @@
     <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}"/>
 {% endblock %}
 {% endif %}
+
+{% block extrahead %}
+{% if page.extra_css %}
+<style>
+    {{ page.extra_css }}
+</style>
+{% endif %}
+{% endblock %}
+
 {% block content %}
 <section class="body content">
 
