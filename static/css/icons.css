@@ -9,20 +9,14 @@ i.icon svg {
   margin: 0 4px 0 0;
 }
 
-header i.icon svg {
-  fill: var(--icon-color-header);
+:is(header, footer) i.icon svg {
+  fill: var(--icon-color-blueprint);
 }
 article i.icon svg {
   fill: var(--icon-color-content);
 }
-footer i.icon svg {
-  fill: var(--icon-color-footer);
-}
-header a:hover i.icon svg,
-header .active i.icon svg {
-  fill: var(--header-background);
-}
-footer a:hover i.icon svg,
-footer .active i.icon svg {
-  fill: var(--footer-background);
+
+:is(header, footer) a:hover i.icon svg,
+:is(header, footer) .active i.icon svg {
+  fill: var(--blueprint-bg);
 }

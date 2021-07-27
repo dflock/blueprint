@@ -4,10 +4,10 @@
   border: 1px solid var(--img-border-color);
   border-radius: var(--border-radius);
   padding: 0.5rem;
-  background: var(--content-background);
+  background: var(--img-bg);
   float: left;
   margin: 1em 1em 1em 0;
-  box-shadow: 4px 4px 4px 0 rgba(128, 128, 128, 0.5);
+  box-shadow: 4px 4px 4px 0 var(--img-shadow-color);
   max-width: 100%;
   height: auto;
 }
@@ -41,10 +41,10 @@
   border: 1px solid var(--img-border-color);
   border-bottom: none;
   border-radius: 4px;
-  background: var(--content-background);
+  background: var(--img-bg);
   margin: 0 1em 1em 0;
   padding: 0.5rem 0.5rem 0.25rem 0.5rem;
-  box-shadow: 4px 4px 4px 0 rgba(128, 128, 128, 0.5);
+  box-shadow: 4px 4px 4px 0 var(--img-shadow-color);
 }
 .content figure.align-right {
   float: right;
@@ -70,8 +70,8 @@
 
   border: 1px solid var(--img-border-color);
   border-top: none;
-  background-color: var(--content-background);
-  box-shadow: 4px 4px 4px 0 rgba(128, 128, 128, 0.5);
+  background-color: var(--img-bg);
+  box-shadow: 4px 4px 4px 0 var(--img-shadow-color);
   border-radius: 4px;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
@@ -79,5 +79,5 @@
   font-size: 80%;
 }
 .content figcaption .amp {
-  color: #bbb;
+  color: var(--text-color-amp);
 }

@@ -1,30 +1,47 @@
 /* CSS Variables */
 :root {
-  --blueprint-blue: #2c71b8;
+  color-scheme: light dark;
+
+  --content-bg: #eaeaeb;
+  --content-fg: #efefef;
+  --content-border: #bbb;
+
+  --blueprint-bg: #2c71b8;
+  --blueprint-fg: #e8e8e8;
 
   --border-radius: 0.2rem;
-  --text-color-dark: #001;
+  --text-color: #001;
   --text-color-muted: #666;
-  --text-color-light: #e8e8e8;
   --text-color-amp: #bbb;
 
-  /* --link-color: #0a5693; */
-  --link-color: var(--blueprint-blue);
+  --inline-code-bg: var(--content-fg);
+  --inline-code-fg: #d63384;
+  --inline-code-border: var(--content-border);
 
-  --content-background: #fff;
-  --header-background: var(--blueprint-blue);
-  --footer-background: var(--blueprint-blue);
-  --admonition-background: var(--blueprint-blue);
+  --code-block-bg: #090916;
+  --code-block-fg: #f8f8f2;
 
-  --img-border-color: #bbb;
+  --blockquote-border: var(--content-border);
+  --blockquote-bg: var(--content-fg);
+
+  --link-color: var(--blueprint-bg);
+  --link-color-hover: #1a5a99;
+
+  --admonition-bg: var(--blueprint-bg);
+
+  --hr-fg: #444;
+
+  --img-border-color: var(--content-border);
+  --img-bg: var(--content-fg);
+  --img-shadow-color: rgba(100, 100, 100, 0.5);
+
   --admonition-border-color: #3c7cbd;
 
   --icon-color-content: #bbb;
-  --icon-color-header: #e8e8e8;
-  --icon-color-footer: #e8e8e8;
+  --icon-color-blueprint: #e8e8e8;
 
-  --pagination-hover-background: #e9ecef;
-  --pagination-border-color: #dee2e6;
+  --pagination-hover-bg: #e9ecec;
+  --pagination-border-color: #bcc4cd;
 
   --font-stack-serif: Constantia, 'Lucida Bright', Lucidabright, 'Lucida Serif',
     Lucida, 'DejaVu Serif', 'Bitstream Vera Serif', 'Liberation Serif', Georgia,
@@ -38,4 +55,35 @@
   --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
     Arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --content-bg: #363839;
+    --content-fg: #424446;
+    --content-border: #888;
+
+    --link-color: #4093e4;
+    --link-color-hover: #74acda;
+
+    --text-color: #d1cec9;
+    --text-color-muted: #ada69d;
+    --blueprint-fg: #e8e8e8;
+
+    --hr-fg: #fff;
+
+    --text-color-amp: #ada69d;
+
+    --inline-code-fg: #ff8ac4;
+    --inline-code-border: #666;
+
+    --img-shadow-color: rgba(5, 5, 5, 0.5);
+
+    --pagination-hover-bg: var(--content-fg);
+    --pagination-border-color: #777;
+  }
+  body .content hr {
+    background: repeat-x 50%
+      url('data:image/svg+xml;utf8,<svg width="160" height="1" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h160" stroke="%23fff"/></svg>');
+  }
 }

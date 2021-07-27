@@ -1,0 +1,41 @@
+/*
+
+  Styles for the E-Numbers stuff
+  TODO: Only loads on that page
+
+*/
+
+nav.enumbers ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+nav.enumbers li {
+  float: left;
+  padding-right: 1rem;
+}
+
+table.enumbers {
+  width: 100%;
+}
+.enumbers :is(td.good, td.bad, td.unknown) {
+  text-align: center;
+}
+.enumbers td.bad {
+  background-color: #f63;
+  font-weight: bolder;
+  color: #fff;
+}
+.enumbers td.good {
+  background-color: #6c6;
+  font-weight: bolder;
+  color: #fff;
+}
+.enumbers td.unknown {
+  background-color: #ffc;
+}
+
+.enumbers td .altname {
+  font-size: smaller;
+  font-style: italic;
+  color: #666;
+}

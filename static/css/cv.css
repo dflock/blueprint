@@ -30,10 +30,10 @@
   color: var(--text-color-amp);
 }
 .hresume .boxout {
-  border: 1px solid var(--img-border-color);
+  border: 1px solid var(--content-border);
   border-radius: var(--border-radius);
   padding: 1rem;
-  background-color: #efefef;
+  background-color: var(--content-fg);
 }
 .hresume .boxout address,
 .hresume .boxout dl {

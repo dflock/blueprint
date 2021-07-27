@@ -12,8 +12,8 @@
         <div class="article-content">
             {{ article.summary }}
 
-            <a class="read-more" href="{{ SITEURL }}/{{ article.url }}">
-            Read More {% if ICONS['read-more'] %}<i class="icon">{{ICONS['read-more']}}</i>{% endif %}</a>
+            <span class="page-item"><a class="page-link" href="{{ SITEURL }}/{{ article.url }}">
+            Read More {% if ICONS['read-more'] %}<i class="icon">{{ICONS['read-more']}}</i>{% endif %}</a></span>
             <hr />
         </div>
     </div>
