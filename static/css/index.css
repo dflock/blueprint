@@ -6,6 +6,9 @@
   text-decoration: underline;
   color: var(--text-color);
 }
+.index .read-more .page-link {
+  border-radius: var(--border-radius);
+}
 
 .index.minimal .tag-list-container {
   margin-top: -0.25rem;
