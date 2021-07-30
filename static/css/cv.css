@@ -6,6 +6,7 @@
 }
 .hresume .intro .boxout {
   flex: 1;
+  margin-top: -1rem;
 }
 
 .hresume h1,
@@ -43,11 +44,24 @@
   color: var(--text-color-muted);
 }
 
+.hresume .xp_description {
+  display: flex;
+}
+.hresume .xp_description .smallprint {
+  padding: 1rem;
+  flex: 1;
+}
+.hresume .xp_description .job_description {
+  padding: 1rem;
+  flex: 3;
+}
+
 .hresume .experience h4 {
   font-weight: bold;
 }
 .hresume .experience .smallprint p {
   text-align: right;
+  font-size: 1rem;
 }
 .hresume .experience .job_description p {
   line-height: 1.3;

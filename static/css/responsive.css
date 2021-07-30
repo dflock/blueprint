@@ -25,6 +25,9 @@
   .hresume .boxout {
     width: 90%;
   }
+  .hresume .technical-skills {
+    margin-top: -1rem;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -38,7 +41,10 @@
   header,
   footer {
     padding: 1.5rem 0.5rem;
-    margin-bottom: 1rem;
+  }
+
+  .hresume .technical-skills {
+    margin-top: -2rem;
   }
 }
 
@@ -62,5 +68,8 @@
   }
   .hresume .skills {
     column-count: 2;
+  }
+  .hresume .technical-skills {
+    margin-top: -3rem;
   }
 }
