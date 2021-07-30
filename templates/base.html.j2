@@ -90,7 +90,6 @@
     />
     {% endif %}
 
-    <!-- Le styles -->
     {% assets filters="cssmin", output="css/style.min.css", 
       "css/bs5/bootstrap-reboot.css", 
       "css/variables.css", 
@@ -146,7 +145,16 @@
       content="{{ SITEURL }}/images/favicon-128x128.png"
     />
     <meta property="og:url" content="{{ SITEURL }}" />
-    {% endblock %} {% endif %} {% block extrahead %} {% endblock %}
+    {% endblock %} {% endif %}
+
+    {% if SHOW_THEME_SWITCHER %}
+    {% assets filters="rjsmin", output="js/js.min.css", 
+      "js/theme-switcher.js"%}
+    <script src="{{SITEURL}}/{{ASSET_URL}}"></script>
+    {% endassets %}
+    {% endif %}
+    
+    {% block extrahead %} {% endblock %}
   </head>
 
   <body>

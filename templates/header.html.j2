@@ -33,3 +33,10 @@
   {% endif %}
   </ul>
 </nav>
+
+{% if SHOW_THEME_SWITCHER %}
+<div id="theme-toggle">
+  <i class="icon dark-theme" title="Switch to light mode">{{ICONS['dark-theme']}}</i>
+  <i class="icon light-theme" title="Switch to dark mode">{{ICONS['light-theme']}}</i>
+</div>
+{% endif %}
