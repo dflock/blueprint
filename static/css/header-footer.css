@@ -39,7 +39,7 @@ Common Header & Footer
 :is(header, footer) nav li a {
   color: var(--blueprint-fg);
   display: inline-block;
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem;
   width: 100%;
   word-break: break-all;
   transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out,
@@ -73,6 +73,7 @@ Common Header & Footer
 header {
   display: flex;
   justify-content: center;
+  margin-bottom: 0.5rem;
 }
 
 /* Header specific nav */
@@ -160,6 +161,11 @@ body.light-theme #theme-toggle i.icon.dark-theme {
 
 ********************************/
 
+footer {
+  padding: 1em 2em;
+  margin: 1em 0 0 0;
+}
+
 /* Footer specific nav */
 footer li {
   text-align: left;
@@ -175,10 +181,6 @@ footer li.feeds a {
   margin: 0 3px 0 -6px;
 }
 
-footer {
-  padding: 1em 2em;
-  margin: 1em 0 0 0;
-}
 footer .row {
   display: flex;
 }
