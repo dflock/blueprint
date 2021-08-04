@@ -1,3 +1,16 @@
+/* Small devices and down/only */
+@media (max-width: 420px) {
+  /* Make figues & images in articles full width */
+  .content :is(figure, img),
+  .content :is(figure, img).align-left,
+  .content :is(figure, img).align-right,
+  .content :is(figure, img).small {
+    float: none;
+    margin: 0 0 1rem 0;
+    width: initial;
+  }
+}
+
 /* Small devices and up */
 @media (min-width: 400px) {
   .brand {

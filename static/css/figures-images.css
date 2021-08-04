@@ -25,6 +25,10 @@
   margin-bottom: 0.15em;
 }
 
+.content img.small {
+  width: 300px;
+}
+
 .content img.bare {
   border: none;
   border-radius: 0;
@@ -32,7 +36,11 @@
   box-shadow: none;
 }
 
-/* New style html5 figures */
+/*
+
+  Figures
+
+ */
 .content figure {
   display: table;
   max-width: 100%;
@@ -52,6 +60,9 @@
 }
 .content figure.align-left {
   float: left;
+}
+.content figure.small {
+  width: 332px;
 }
 .content figure img {
   display: block;
