@@ -82,8 +82,6 @@
     --pagination-hover-bg: var(--content-fg);
     --pagination-border-color: #777;
   }
-  body .content hr {
-    background: repeat-x 50%
-      url('data:image/svg+xml;utf8,<svg width="160" height="1" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h160" stroke="%23fff"/></svg>');
-  }
+}
+
 }

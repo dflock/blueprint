@@ -265,19 +265,35 @@ section.content {
 }
 
 .content hr {
-  border: none;
+  background-color: transparent;
+  line-height: 1rem;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: var(--hr-fg);
   text-align: center;
-  height: 24px;
-
-  background: repeat-x 50%
-    url('data:image/svg+xml;utf8,<svg width="160" height="1" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h160" stroke="%23444"/></svg>');
+  height: 1.5rem;
+  transition: none;
+}
+.content hr::before {
+  content: '';
+  background: var(--hr-fg);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
 }
 .content hr::after {
-  color: var(--hr-fg);
-  background: var(--content-bg);
   font-family: var(--font-flourish);
   content: '§';
+  position: relative;
+  display: inline-block;
+
   padding: 0 0.5rem;
+  line-height: 1.5rem;
+  color: var(--hr-fg);
+  background-color: var(--content-bg);
 }
 
 /* Styles for Tags */
