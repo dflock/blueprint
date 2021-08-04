@@ -14,6 +14,10 @@ body {
   font-family: var(--font-body);
   color: var(--text-color);
   background-color: var(--content-bg);
+
+  transition-property: color, background-color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing);
 }
 
 h1,

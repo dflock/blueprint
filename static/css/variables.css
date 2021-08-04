@@ -1,12 +1,18 @@
 /* CSS Variables */
 :root {
   color-scheme: light dark;
+  --duration: 0.5s;
+  --timing: ease;
 
   --content-bg: #eaeaeb;
   --content-fg: #efefef;
   --content-border: #bbb;
 
-  --blueprint-bg: #2c71b8;
+  /* --blueprint-bg: #2c71b8; */
+  --primary: 210, 61%;
+  --primary-l: 45%;
+  --blueprint-bg: hsl(var(--primary), var(--primary-l));
+  /* --blueprint-bg: #2d46b9; */
   --blueprint-fg: #e8e8e8;
 
   --border-radius: 0.2rem;
@@ -25,7 +31,7 @@
   --blockquote-bg: var(--content-fg);
 
   --link-color: var(--blueprint-bg);
-  --link-color-hover: #1a5a99;
+  --link-color-hover: hsl(var(--primary), calc(var(--primary-l) -15%));
 
   --admonition-bg: var(--blueprint-bg);
 
@@ -59,12 +65,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    color-scheme: dark;
     --content-bg: #363839;
     --content-fg: #424446;
     --content-border: #888;
 
-    --link-color: #4093e4;
-    --link-color-hover: #74acda;
+    --link-color: hsl(var(--primary), calc(var(--primary-l) +5%));
+    --link-color-hover: hsl(var(--primary), calc(var(--primary-l) +15%));
 
     --text-color: #d1cec9;
     --text-color-muted: #ada69d;
@@ -77,6 +84,7 @@
     --inline-code-fg: #ff8ac4;
     --inline-code-border: #666;
 
+    --img-bg: var(--content-fg);
     --img-shadow-color: rgba(5, 5, 5, 0.5);
 
     --pagination-hover-bg: var(--content-fg);
@@ -84,4 +92,31 @@
   }
 }
 
+body.dark-theme {
+  color-scheme: dark;
+  --content-bg: #363839;
+  --content-fg: #424446;
+  --content-border: #888;
+
+  --link-color: hsl(var(--primary), calc(var(--primary-l) +5%));
+  --link-color-hover: hsl(var(--primary), calc(var(--primary-l) +15%));
+  /* --link-color: #4093e4;
+  --link-color-hover: #74acda; */
+
+  --text-color: #d1cec9;
+  --text-color-muted: #ada69d;
+  --blueprint-fg: #e8e8e8;
+
+  --hr-fg: #fff;
+
+  --text-color-amp: #ada69d;
+
+  --inline-code-fg: #ff8ac4;
+  --inline-code-border: #666;
+
+  --img-bg: var(--content-fg);
+  --img-shadow-color: rgba(5, 5, 5, 0.5);
+
+  --pagination-hover-bg: var(--content-fg);
+  --pagination-border-color: #777;
 }

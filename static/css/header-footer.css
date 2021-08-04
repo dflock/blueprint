@@ -8,9 +8,10 @@ Common Header & Footer
 
 :is(header, footer) {
   padding: 1.5rem 0.5rem;
-  background: var(--blueprint-bg) url(/images/blueprint-background.png) repeat;
+  background: var(--blueprint-bg) url(/images/blueprint-background.svg) repeat;
+  background-size: 1.5%;
   color: var(--blueprint-fg);
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 }
 
 /* Header & Footer Common Nav */
@@ -41,6 +42,8 @@ Common Header & Footer
   padding: 0.25rem 0.5rem;
   width: 100%;
   word-break: break-all;
+  transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out,
+    border-color 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
 }
 :is(header, footer) nav li i {
   color: var(--blueprint-fg);
@@ -93,6 +96,62 @@ header nav li {
 }
 a.brand:hover {
   text-decoration: underline;
+}
+
+/*
+
+  Theme toggle
+
+*/
+#theme-toggle {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-bottom-left-radius: 0.5rem;
+  padding: 0.25rem 0.5rem 0.5rem 0.75rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  cursor: pointer;
+}
+#theme-toggle i.icon svg {
+  margin: 0;
+  width: 1rem;
+  height: 1rem;
+}
+#theme-toggle i.icon.dark-theme {
+  display: none;
+}
+
+/* Current theme is dark */
+@media (prefers-color-scheme: dark) {
+  #theme-toggle i.icon.light-theme {
+    display: none;
+  }
+  #theme-toggle i.icon.dark-theme {
+    display: block;
+  }
+}
+body.dark-theme #theme-toggle i.icon.light-theme {
+  display: none;
+}
+body.dark-theme #theme-toggle i.icon.dark-theme {
+  display: block;
+}
+
+/* Current theme is light */
+@media (prefers-color-scheme: light) {
+  #theme-toggle i.icon.light-theme {
+    display: block;
+  }
+  #theme-toggle i.icon.dark-theme {
+    display: none;
+  }
+}
+body.light-theme #theme-toggle i.icon.light-theme {
+  display: block;
+}
+body.light-theme #theme-toggle i.icon.dark-theme {
+  display: none;
 }
 
 /********************************

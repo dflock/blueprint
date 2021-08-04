@@ -71,6 +71,7 @@
   border: 1px solid var(--img-border-color);
   border-top: none;
   background-color: var(--img-bg);
+  color: var(--text-color);
   box-shadow: 4px 4px 4px 0 var(--img-shadow-color);
   border-radius: 4px;
   border-top-right-radius: 0;
