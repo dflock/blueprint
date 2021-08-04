@@ -15,8 +15,14 @@
     margin-bottom: 0;
   }
 
+  :is(header, footer) {
+    padding: 0.75rem;
+  }
   footer .row {
     flex-direction: column;
+  }
+  :is(header, footer) nav {
+    margin-right: 0.5rem;
   }
 
   .hresume .intro {
@@ -38,9 +44,11 @@
   .content-title h1 {
     font-size: 3rem;
   }
-  header,
-  footer {
+  :is(header, footer) {
     padding: 1.5rem 0.5rem;
+  }
+  :is(header, footer) nav {
+    margin-right: 0.5rem;
   }
 
   .hresume .technical-skills {

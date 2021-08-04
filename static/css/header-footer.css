@@ -2,12 +2,11 @@
 
 /********************************
 
-  Common Header & Footer
+Common Header & Footer
 
 ********************************/
 
-header,
-footer {
+:is(header, footer) {
   padding: 1.5rem 0.5rem;
   background: var(--blueprint-bg) url(/images/blueprint-background.png) repeat;
   color: var(--blueprint-fg);
@@ -15,61 +14,50 @@ footer {
 }
 
 /* Header & Footer Common Nav */
-header nav,
-footer nav {
+:is(header, footer) nav {
   margin-right: 1rem;
 }
 
-header a,
-footer a {
+:is(header, footer) a {
   text-decoration: none;
   border-radius: var(--border-radius);
   border: 1px solid transparent;
 }
-header a:hover,
-footer a:hover,
-header .amp,
-footer .amp {
+:is(header, footer) a:hover,
+:is(header, footer) .amp {
   color: var(--blueprint-fg);
 }
 
-header nav ul,
-footer nav ul {
+:is(header, footer) nav ul {
   list-style-type: none;
   padding: 0;
   margin-top: 0;
   margin-right: 0;
 }
 
-header nav li a,
-footer nav li a {
+:is(header, footer) nav li a {
   color: var(--blueprint-fg);
   display: inline-block;
   padding: 0.25rem 0.5rem;
   width: 100%;
   word-break: break-all;
 }
-header nav li i,
-footer nav li i {
+:is(header, footer) nav li i {
   color: var(--blueprint-fg);
 }
-header nav li a:hover,
-footer nav li a:hover {
+:is(header, footer) nav li a:hover {
   color: var(--blueprint-bg);
   background-color: var(--blueprint-fg);
   border: 1px solid var(--blueprint-fg);
 }
-header nav li a:hover .amp,
-footer nav li a:hover .amp {
+:is(header, footer) nav li a:hover .amp {
   color: inherit;
 }
-header nav li.active a,
-footer nav li.active a {
+:is(header, footer) nav li.active a {
   background-color: var(--blueprint-fg);
   color: var(--blueprint-bg);
 }
-header nav li.active .amp,
-footer nav li.active .amp {
+:is(header, footer) nav li.active .amp {
   color: inherit;
 }
 
