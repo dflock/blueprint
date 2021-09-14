@@ -39,7 +39,7 @@
 
   --img-border-color: var(--content-border);
   --img-bg: var(--content-fg);
-  --img-shadow-color: rgba(100, 100, 100, 0.5);
+  --img-shadow-color: hsla(0deg, 0%, 0%, 0.075);
 
   --admonition-border-color: #3c7cbd;
 
@@ -85,7 +85,6 @@
     --inline-code-border: #666;
 
     --img-bg: var(--content-fg);
-    --img-shadow-color: rgba(5, 5, 5, 0.5);
 
     --pagination-hover-bg: var(--content-fg);
     --pagination-border-color: #777;
@@ -115,7 +114,6 @@ body.dark-theme {
   --inline-code-border: #666;
 
   --img-bg: var(--content-fg);
-  --img-shadow-color: rgba(5, 5, 5, 0.5);
 
   --pagination-hover-bg: var(--content-fg);
   --pagination-border-color: #777;
