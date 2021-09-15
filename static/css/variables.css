@@ -77,10 +77,14 @@
     --text-color-muted: #ada69d;
     --blueprint-fg: #e8e8e8;
 
+    --blockquote-border: var(--content-border);
+    --blockquote-bg: var(--content-fg);
+
     --hr-fg: #fff;
 
     --text-color-amp: #ada69d;
 
+    --inline-code-bg: var(--content-fg);
     --inline-code-fg: #ff8ac4;
     --inline-code-border: #666;
 
@@ -106,10 +110,14 @@ body.dark-theme {
   --text-color-muted: #ada69d;
   --blueprint-fg: #e8e8e8;
 
+  --blockquote-border: var(--content-border);
+  --blockquote-bg: var(--content-fg);
+
   --hr-fg: #fff;
 
   --text-color-amp: #ada69d;
 
+  --inline-code-bg: var(--content-fg);
   --inline-code-fg: #ff8ac4;
   --inline-code-border: #666;
 
