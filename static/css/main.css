@@ -113,6 +113,13 @@ section.content {
   margin-top: 0;
 }
 
+.content aside {
+  margin-left: 1rem;
+  border-left: 0.35rem solid var(--content-border);
+  padding-left: 1rem;
+  border-radius: var(--border-radius);
+}
+
 /* 
 
   Article footnotes 
@@ -272,7 +279,7 @@ section.content {
 /* 
 
   Fancy horizontal rules
-  
+
 */
 .content hr {
   background-color: transparent;
