@@ -80,6 +80,10 @@
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  body > div.content {
+    margin: auto;
+    max-width: 900px;
+  }
   .content-title h1 {
     font-size: 3.375rem;
   }
