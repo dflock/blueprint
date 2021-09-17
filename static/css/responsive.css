@@ -1,6 +1,6 @@
 /* Small devices and down/only */
 @media (max-width: 420px) {
-  /* Make figues & images in articles full width */
+  /* Make figures & images in articles full width */
   .content :is(figure, img),
   .content :is(figure, img).align-left,
   .content :is(figure, img).align-right,
@@ -30,6 +30,10 @@
     display: none;
   }
 
+  header {
+    flex-direction: column;
+    padding: 1rem 0.5rem;
+  }
   :is(header, footer) {
     padding: 0.75rem;
   }
@@ -83,6 +87,10 @@
   body > div.content {
     margin: auto;
     max-width: 900px;
+  }
+  header {
+    flex-direction: row;
+    padding: 1.5rem 0.5rem;
   }
   .content-title h1 {
     font-size: 3.375rem;

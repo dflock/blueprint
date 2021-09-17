@@ -82,7 +82,7 @@ header nav {
 }
 header nav li {
   float: left;
-  margin-left: 1rem;
+  margin-left: 0.25rem;
 }
 
 /* Site header main heading */
