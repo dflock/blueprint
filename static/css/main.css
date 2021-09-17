@@ -181,7 +181,8 @@ section.content {
 
 .content .admonition-block {
   padding: 0.25rem 1rem;
-  background: var(--admonition-bg) url(/images/blueprint-background.png);
+  background: var(--blueprint-bg) url(/images/blueprint-background.svg) repeat;
+  background-size: 15px;
   color: var(--blueprint-fg);
   border: 1px solid var(--admonition-border-color);
   border-radius: var(--border-radius);

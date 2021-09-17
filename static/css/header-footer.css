@@ -9,7 +9,7 @@ Common Header & Footer
 :is(header, footer) {
   padding: 1.5rem 0.5rem;
   background: var(--blueprint-bg) url(/images/blueprint-background.svg) repeat;
-  background-size: 1.5%;
+  background-size: 15px;
   color: var(--blueprint-fg);
   /* margin-bottom: 1rem; */
 }
