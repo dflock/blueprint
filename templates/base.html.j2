@@ -148,7 +148,7 @@
     {% endblock %} {% endif %}
 
     {% if SHOW_THEME_SWITCHER %}
-    {% assets filters="rjsmin", output="js/js.min.css", 
+    {% assets filters="rjsmin", output="js/site.min.js", 
       "js/theme-switcher.js"%}
     <script src="{{SITEURL}}/{{ASSET_URL}}"></script>
     {% endassets %}
