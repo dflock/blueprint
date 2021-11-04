@@ -123,10 +123,12 @@
             <hr />
             {% endif %}
 
+            {% if DISQUS_SITENAME %}
             <div>
                 <h3 id="article-comments-section">Comments</h3>
                 {% include 'disqus.html.j2' %}
             </div>
+            {% endif %}
         </section>
     </div>
 
