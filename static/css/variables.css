@@ -80,7 +80,7 @@
     --blockquote-border: var(--content-border);
     --blockquote-bg: var(--content-fg);
 
-    --hr-fg: #fff;
+    --hr-fg: var(--blueprint-fg);
 
     --text-color-amp: #ada69d;
 
@@ -113,7 +113,7 @@ body.dark-theme {
   --blockquote-border: var(--content-border);
   --blockquote-bg: var(--content-fg);
 
-  --hr-fg: #fff;
+  --hr-fg: var(--blueprint-fg);
 
   --text-color-amp: #ada69d;
 

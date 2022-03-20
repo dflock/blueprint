@@ -11,7 +11,6 @@ Common Header & Footer
   background: var(--blueprint-bg) url(/images/blueprint-background.svg) repeat;
   background-size: 15px;
   color: var(--blueprint-fg);
-  /* margin-bottom: 1rem; */
 }
 
 /* Header & Footer Common Nav */
@@ -73,7 +72,7 @@ Common Header & Footer
 header {
   display: flex;
   justify-content: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 /* Header specific nav */
@@ -198,11 +197,11 @@ footer .colophon {
 
 footer a {
   color: var(--blueprint-fg);
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   border: 1px solid transparent;
 }
 
-footer h4 {
+footer h3 {
   font: bold 1rem/1.5 var(--font-sans);
   text-transform: uppercase;
   margin: 0 0 0.2rem 0;
