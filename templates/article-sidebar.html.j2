@@ -1,4 +1,4 @@
-<div class="article-info">
+<section class="article-info">
   <p>
     <span title="{{ article.date.isoformat() }}"
       >{{ article.date|sidebar_date_format }}</span
@@ -46,10 +46,10 @@
       >{{ article.category }}</a
     >
   </p>
-</div>
+</section>
 
 <section>
-  <h3 class="tag_heading">Tags:</h3>
+  <h3 class="tag-heading">Tags:</h3>
   <ul class="tag-list">
     {% for tag in article.tags|sort %}
     <li class="tag">
