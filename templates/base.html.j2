@@ -25,7 +25,7 @@
     <link rel="dns-prefetch" href="//www.google-analytics.com" />
 
     <link rel="preload" href="/theme/css/fonts/Gabriela.woff2" as="font" type="font/woff2" crossorigin />
-
+    <link rel="preload" href="/images/icons/icon_sheet.svg?{{ICON_SPRITE_SHEET_HASH}}" as="image" type="image/svg+xml" />
 
     <title>
       {% block title %}{{ SITE_TITLE }} &middot; {{ SITENAME }}{% endblock %}
@@ -73,15 +73,17 @@
       }
     </script>
 
-    {% if DUBLIN_CORE_METADATA %} {% block dublin_core_metadata %} {% endblock
-    %} {% endif %} {% if FEED_RSS %}
+    {% if DUBLIN_CORE_METADATA %} {% block dublin_core_metadata %} {% endblock %} {% endif %}
+
+    {% if FEED_RSS %}
     <link
       rel="alternate"
       type="application/rss+xml"
       title="RSS Feed (full content)"
       href="/{{ FEED_RSS }}"
     />
-    {% endif %} {% if FEED_ATOM %}
+    {% endif %}
+    {% if FEED_ATOM %}
     <link
       rel="alternate"
       type="application/atom+xml"
@@ -119,9 +121,11 @@
       rel="stylesheet"
       type="text/css"
     />
+
     {% if TWITTER_ACCOUNT_ID %}
     <meta property="twitter:account_id" content="{{ TWITTER_ACCOUNT_ID }}" />
-    {% endif %} {% if TWITTER_CARD %} {% block twittercard %}
+    {% endif %}
+    {% if TWITTER_CARD %} {% block twittercard %}
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@{{ TWITTER_USERNAME }}" />
     <meta name="twitter:title" content="{{ SITENAME }}" />
@@ -132,7 +136,8 @@
       content="{{ SITEURL }}/images/favicon-128x128.png"
     />
     <meta name="twitter:domain" content="{{ SITE_DOMAIN }}" />
-    {% endblock %} {% endif %} {% if OPEN_GRAPH_METADATA %} {% block opengraph
+    {% endblock %} {% endif %}
+    {% if OPEN_GRAPH_METADATA %} {% block opengraph
     %} {% if OPEN_GRAPH_FB_APP_ID %}
     <meta property="fb:app_id" content="{{ OPEN_GRAPH_FB_APP_ID }}" />
     {% endif %}
@@ -149,7 +154,9 @@
 
     {% if SHOW_THEME_SWITCHER %}
     {% assets filters="rjsmin", output="js/site.min.js", 
-      "js/theme-switcher.js"%}
+      "js/theme-switcher.js",
+      "js/svg-convert.js"
+    %}
     <script src="{{SITEURL}}/{{ASSET_URL}}"></script>
     {% endassets %}
     {% endif %}
@@ -158,7 +165,10 @@
   </head>
 
   <body>
+    <img style="display: none;" src="/images/icons/icon_sheet.svg?{{ICON_SPRITE_SHEET_HASH}}" onload="convertSVG(this)" />
+    {# {{ ICON_SPRITE_SHEET }} #}
     <header>
+
       {% include "header.html.j2" %}
     </header>
 

@@ -16,6 +16,7 @@ article .article-sidebar .article-info {
 }
 article .article-sidebar section {
   flex: 1;
+  margin-bottom: 0.75rem;
 }
 article .article-sidebar .series {
   flex: 1;
@@ -82,7 +83,7 @@ article .article-sidebar h3 {
 
 /* Landscape phones and down */
 @media screen and (max-width: 480px) {
-  article .article-sidebar p.tag_heading,
+  article .article-sidebar p.tag-heading,
   article .article-sidebar ul {
     display: inline;
   }

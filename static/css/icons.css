@@ -16,7 +16,18 @@ article i.icon svg {
   fill: var(--icon-color-content);
 }
 
+/* Have icons in the header & footer change colour on hover: */
 :is(header, footer) a:hover i.icon svg,
 :is(header, footer) .active i.icon svg {
   fill: var(--blueprint-bg);
+}
+
+i.icon noscript img {
+  padding: 0;
+  border: none;
+  float: none;
+  margin: 0;
+  box-shadow: none;
+
+  margin-right: -14px;
 }

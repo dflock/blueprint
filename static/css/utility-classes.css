@@ -41,3 +41,9 @@
 .three-columns > ul {
   column-count: 3;
 }
+
+/* Make blocks scrollable */
+.content .scrollable pre {
+  overflow-y: scroll;
+  height: 25rem;
+}

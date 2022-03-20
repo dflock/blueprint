@@ -13,8 +13,7 @@
             {{ article.summary }}
 
             <span class="page-item read-more"><a class="page-link" href="{{ SITEURL }}/{{ article.url }}">
-            Read More {% if ICONS['read-more'] %}<i class="icon">{{ICONS['read-more']}}</i>{% endif %}</a></span>
-            <hr />
+            Continue reading &#8220;{{ article.title }}&#8221; {% if ICONS['read-more'] %}<i class="icon">{{ICONS['read-more']}}</i>{% endif %}</a></span>
         </div>
     </div>
 </article>
