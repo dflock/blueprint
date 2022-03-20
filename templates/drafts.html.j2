@@ -1,0 +1,60 @@
+{% extends "base.html.j2" %}
+{% block title %}Drafts &middot; {{ SITENAME }}{% endblock %}
+{% block description %}Drafts on {{ SITENAME }}, organised by Date.{% endblock %}
+{% block extrahead %}<link rel="stylesheet" media="all" href="{{ SITEURL }}/theme/css/archive.css" />{% endblock %}
+
+{% block content %}
+<h1 class="content-title">Drafts</h1>
+
+<section>
+  <h2>Articles</h2>
+  {% if drafts %}
+  <table class="archive">
+    <col style="width: 20%; text-align: right" />
+    <col style="width: 80%" />
+    <tbody>
+      {% for article in drafts|sort(attribute='date', reverse=True) %}
+      <tr>
+        <td>
+          {{ article.date|archive_date_format }}<br />
+          <span class="smallprint">{{ article.stats['read_mins'] }} min read</span>
+        </td>
+        <td>
+          <h4><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h4>
+          <p class="smallprint">{{ article.meta_description }}</p>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p>There are currently no draft articles.</p>
+  {% endif %}
+</section>
+
+<section>
+  <h2>Pages</h2>
+  {% if draft_pages %}
+  <table class="archive">
+    <col style="width: 20%; text-align: right" />
+    <col style="width: 80%" />
+    <tbody>
+      {% for page in draft_pages|sort(attribute='date', reverse=True) %}
+      <tr>
+        <td>
+          {{ page.date|archive_date_format }}<br />
+          <span class="smallprint">{{ page.stats['read_mins'] }} min read</span>
+        </td>
+        <td>
+          <h4><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></h4>
+          <p class="smallprint">{{ page.meta_description }}</p>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p>There are currently no draft pages.</p>
+  {% endif %}
+</section>
+{% endblock %}
