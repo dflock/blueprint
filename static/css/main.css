@@ -29,6 +29,7 @@ h6 {
   font-family: var(--font-heading);
   font-weight: normal;
   color: var(--text-color);
+  word-break: break-word;
 }
 h1 {
   font-size: calc(1.375rem + 3.5vw);
@@ -169,17 +170,18 @@ section.content {
   width: 100%;
   margin-bottom: 1rem;
 }
-.content th {
+.content :is(th, td) {
   border: none;
+  word-break: break-word;
+  padding: 0.25rem;
+}
+.content th {
   border-bottom: 2px solid var(--content-border);
   border-right: 2px solid var(--content-bg);
   text-align: left;
-  padding: 0.25rem;
 }
 .content td {
-  border: none;
   vertical-align: top;
-  padding: 0.25rem;
   border-bottom: 1px dotted var(--content-border);
   border-right: 1px solid var(--content-bg);
 }
