@@ -1,0 +1,73 @@
+{% extends "article.html.j2" %}
+
+{% block content %}
+<article>
+
+    <div class="title">
+        <div class="content-title">
+            <h1 itemprop="name headline">{{ article.title }}</h1>
+        </div>
+    </div>
+
+    <div class="main review">
+
+        <div class="article-sidebar">
+            {% include "article-sidebar.html.j2" %}
+            {% include "review-sidebar.html.j2" %}
+            {% include "article-sidebar-toc.html.j2" %}
+        </div>
+
+        <section class="article-content" itemprop="text articleBody">
+
+            {{ article.content }}
+
+            <hr />
+
+            {% if article.related_posts %}
+            <div>
+                <div class="realted_posts span11">
+
+                    {% if article.series %}
+                    <h3>This post is part {{ article.series.index }} of the {{ article.series.all|length }} part "{{ article.series.name }}" series:</h3>
+                    <nav>
+                        <ul class="parts">
+                        {% for part_article in article.series.all %}
+                            <li {% if part_article == article %}class="active"{% endif %}>
+                                {% if part_article == article %}
+                                <p>{{ part_article.title }}</p>
+                                {% else %}
+                                <p><a href='{{ SITEURL }}/{{ part_article.url }}'>{{ part_article.title }}</a></p>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    </nav>
+
+                    {% else %}
+
+                    <h3>Related Posts</h3>
+                    <nav>
+                        <dl>
+                        {% for related_post in article.related_posts %}
+                            <dt><h4><a href="{{ SITEURL }}/{{ related_post.url }}">{{ related_post.title }}</a></h4></dt>
+                            <dd><span class="smallprint">{{ related_post.meta_description }}</span></dd>
+                        {% endfor %}
+                        </dl>
+                    </nav>
+                    {% endif %}
+                </div>
+            </div>
+            <hr />
+            {% endif %}
+
+            {% if DISQUS_SITENAME %}
+            <div>
+                <h3 id="article-comments-section">Comments</h3>
+                {% include 'disqus.html.j2' %}
+            </div>
+            {% endif %}
+        </section>
+    </div>
+
+</article>
+{% endblock %}

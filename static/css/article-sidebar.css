@@ -42,6 +42,7 @@ article .article-sidebar p + ul {
 }
 article .article-sidebar .tag-list {
   margin: 0;
+  margin-left: 1rem;
   padding: 0;
 }
 article .article-sidebar .tag-list .tag {
@@ -79,6 +80,7 @@ article .article-sidebar nav .amp {
 article .article-sidebar h3 {
   color: var(--text-color-muted);
   font-size: 1.1rem;
+  font-weight: bold;
 }
 
 /* Landscape phones and down */

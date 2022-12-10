@@ -1,0 +1,18 @@
+    <section>
+      <dl>
+{% if article.artist %}
+        <dt>Artist:</dt>
+        <dd>{{article.artist}}</dd>
+{% endif %}
+{% if article.venue %}
+        <dt>Venue:</dt>
+        <dd>{{article.venue}}</dd>
+{% endif %}
+{% if article.rating %}
+        <dt>Rating:</dt>
+        <dd>
+        {{article.rating | rating(5)}}
+        </dd>
+{% endif %}
+      </dl>
+    </section>

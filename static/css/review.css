@@ -1,0 +1,16 @@
+.review td img.bare {
+  margin: 0.1rem 0.5rem 0.1rem 0.1rem;
+}
+.review span.rating svg {
+  margin: 0;
+  width: 1em;
+}
+
+article .article-sidebar dt {
+  font-size: 1.1rem;
+}
+
+article .article-sidebar dd {
+  margin-left: 1rem;
+  font-size: 1em;
+}
