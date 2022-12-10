@@ -209,6 +209,10 @@ section.content {
 .content :is(th, td).valign-top {
   vertical-align: top;
 }
+.content tfoot td {
+  border-top: 2px solid var(--content-border);
+  font-weight: bold;
+}
 
 /* 
 
@@ -346,6 +350,7 @@ section.content {
 }
 .content hr::after {
   font-family: var(--font-flourish);
+  font-size: 1.5rem;
   content: '§';
   position: relative;
   display: inline-block;
