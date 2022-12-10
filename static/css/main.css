@@ -374,3 +374,14 @@ section.content {
 .tag .muted {
   color: var(--text-color-muted);
 }
+
+/* Embedded Video Styles, to make youtube embeds responsive 
+https://dev.to/deammer/embed-responsive-youtube-videos-in-2021-5dkh */
+
+.video-block iframe {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+.video-block {
+  margin-bottom: 0.5rem;
+}
