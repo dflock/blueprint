@@ -33,7 +33,7 @@
         <ul>
           {% for anchor_text, icon, link in SOCIAL %}
           <li>
-            <a itemprop="sameAs" href="{{ link }}" rel="author"
+            <a itemprop="sameAs" href="{{ link }}" rel="author me external"
               ><i class="icon">{{icon}}</i>{{anchor_text}}</a
             >
           </li>
@@ -52,7 +52,7 @@
         <ul>
           {% for anchor_text, icon, link in LINKS %}
           <li>
-            <a href="{{ link }}" rel="author"
+            <a href="{{ link }}" rel="author me external"
               ><i class="icon">{{icon}}</i>{{anchor_text}}</a
             >
           </li>
