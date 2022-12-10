@@ -34,7 +34,10 @@ h6 {
   word-break: break-word;
 }
 h1 {
-  font-size: calc(1.375rem + 3.5vw);
+  --minFontSize: 3rem;
+  --maxFontSize: 6rem;
+  --scaler: 3.5vw;
+  font-size: clamp(var(--minFontSize), var(--scaler), var(--maxFontSize));
   line-height: 1.05;
 }
 h6 {
@@ -292,12 +295,18 @@ section.content {
   border: none;
 }
 
+/* 
+
+  Headers
+
+*/
 .content :is(h1, h2, h3, h4, h5, hr) {
   clear: both;
   float: none;
 }
 .content h2 {
-  font-size: calc(2.325rem + 0.9vw);
+  font-size: 2.325rem;
+  line-height: 1.1;
 }
 .content h3 {
   font-size: 1.6rem;

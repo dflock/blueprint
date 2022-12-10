@@ -9,12 +9,35 @@
     margin: 0 0 1rem 0;
     width: 100%;
   }
+  .brand {
+    font-size: 3.2rem;
+    margin-right: 0;
+    word-break: break-all;
+  }
+  header,
+  footer .row {
+    flex-direction: column;
+  }
+  header nav {
+    margin: 0;
+  }
+
+  header div.brand-container {
+    display: none;
+  }
+  header .home-link {
+    display: list-item;
+  }
 }
 
 /* Small devices and up */
-@media (min-width: 400px) {
+@media (min-width: 421px) {
   .brand {
     font-size: 3rem;
+    word-break: break-all;
+  }
+  header .home-link {
+    display: none;
   }
   article .article-sidebar {
     flex-direction: row;
@@ -78,6 +101,9 @@
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .brand {
+    font-size: 5rem;
+  }
   body > div.content {
     margin: auto;
     max-width: 900px;

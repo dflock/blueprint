@@ -4,6 +4,11 @@
 <nav>
   <ul>
   {% if DISPLAY_CATEGORIES_ON_MENU %}
+    <li class="home-link">
+      <a href="{{ SITEURL }}">
+        <i class="icon">{{ICONS['home']}}</i>
+      </a>
+    </li>
     {% for cat, null in categories %}
     <li {% if cat == category %} class="active" {% endif %}>
       <a href="{{ SITEURL }}/{{ cat.url }}">
