@@ -41,8 +41,17 @@
         </div>
     </div>
 
+    {% if page.toc %}
+        <section class="page-toc">
+            <h3>Contents:</h3>
+            <nav>
+                {{ page.toc }}
+            </nav>
+        </section>
+    {% endif %}
+
     {% if PDF_PROCESSOR %}<a href="{{ SITEURL }}/pdf/{{ page.slug }}.pdf">Get the pdf</a>{% endif %}
-    
+
     {{ page.content }}
 </section>
 {% endblock %}
