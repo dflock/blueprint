@@ -49,13 +49,12 @@
   --pagination-hover-bg: #e9ecec;
   --pagination-border-color: #bcc4cd;
 
-  --font-stack-serif: Constantia, 'Lucida Bright', Lucidabright, 'Lucida Serif',
-    Lucida, 'DejaVu Serif', 'Bitstream Vera Serif', 'Liberation Serif', Georgia,
-    serif;
+  --font-stack-serif: 'Lucida Bright', Lucidabright, 'Lucida Serif', Lucida,
+    'DejaVu Serif', 'Bitstream Vera Serif', 'Liberation Serif', Georgia, serif;
 
   --font-heading: 'Noto Serif', var(--font-stack-serif);
   --font-body: 'Bitter', var(--font-stack-serif);
-  --font-flourish: 'Gabriela', var(--font-stack-serif);
+  --font-flourish: 'Flourishes', var(--font-stack-serif);
   --font-mono: 'PT Mono', SFMono-Regular, Menlo, Monaco, Consolas,
     'Liberation Mono', monospace;
   --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',

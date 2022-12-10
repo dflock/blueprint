@@ -1,12 +1,14 @@
 /* Fonts */
 @font-face {
-  /* This is for flourishes and only includes the following chars: & § */
-  font-family: 'Gabriela';
+  /* This is for flourishes and only includes the following chars: & §”“ */
+  font-family: 'Flourishes';
   font-style: normal;
-  font-weight: 400;
-  src: url('./fonts/Gabriela.woff2');
+  font-weight: normal;
+  /* src: url('./fonts/subset-Gabriela-Regular.woff2') format('woff2'); */
+  src: url('./fonts/subset-Caladea-Regular.woff2') format('woff2');
+  /* src: url('./fonts/Caladea-Regular.ttf'); */
   font-display: swap;
-  unicode-range: U+0020, U+0026, U+00A7;
+  unicode-range: U+0020, U+0026, U+00A7, U+201C, U+201D;
 }
 
 /* Styling for elements */
@@ -92,14 +94,27 @@ section.content {
   background-color: var(--blockquote-bg);
   border-left: 5px solid var(--blockquote-border);
   border-radius: var(--border-radius);
-  padding: 0.5rem 0.25rem 0 0.5rem;
+  padding: 0.5rem 0.5rem 0 0.75rem;
   margin: 0 0 1.25rem;
+  position: relative;
+}
+.content blockquote::before {
+  content: '“';
+  /* U+201C */
+  position: absolute;
+  top: -12px;
+  left: 2px;
+  font-size: 7rem;
+  line-height: 1;
+  font-family: var(--font-flourish);
+  opacity: 0.25;
 }
 .content blockquote p {
   font-style: italic;
 
   margin-bottom: 0.5rem;
   line-height: 1.25;
+  text-indent: 2.25rem;
 }
 .content blockquote p:last-of-type {
   margin-bottom: 0;
